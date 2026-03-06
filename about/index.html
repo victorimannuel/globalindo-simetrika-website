@@ -7,7 +7,18 @@
     <meta name="description"
         content="About PT. Globalindo Simetrika - Vision, Mission, Certifications, and Achievements.">
     <title>About Us | PT. Globalindo Simetrika</title>
+    <link rel="icon" type="image/webp" href="/images/logo.webp">
     <link rel="stylesheet" href="../css/style.css">
+
+    <!-- Performance Optimization -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Outfit:wght@300;400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
+
+    <link rel="preload" href="/css/style.css" as="style">
+    <link rel="preload" href="/images/logo.webp" as="image" fetchpriority="high">
 </head>
 
 <body>
@@ -15,7 +26,7 @@
     <nav class="navbar" id="navbar">
         <div class="container">
             <a href="/" class="nav-logo">
-                <img src="../images/logo.webp" alt="Globalindo Simetrika Logo" class="logo-img">
+                <img src="../images/logo.webp" alt="Globalindo Simetrika Logo" class="logo-img" fetchpriority="high">
                 <span>Globalindo Simetrika</span>
             </a>
             <div class="nav-menu" id="navMenu">
@@ -176,7 +187,8 @@
         <div class="container">
             <div class="footer-grid">
                 <div class="footer-brand"><a href="/" class="nav-logo">
-                        <img src="../images/logo.webp" alt="Globalindo Simetrika Logo" class="logo-img">
+                        <img src="../images/logo.webp" alt="Globalindo Simetrika Logo" class="logo-img"
+                            fetchpriority="high">
                         <span>Globalindo Simetrika</span>
                     </a>
                     <p data-i18n="footer.desc">Your Preferred Partner in Industrial Supply and Repair Solution.</p>
@@ -218,6 +230,7 @@
 
     <script src="../js/i18n.js"></script>
     <script src="../js/main.js"></script>
+    <script type="module" src="../js/animations.js"></script>
 </body>
 
 </html>

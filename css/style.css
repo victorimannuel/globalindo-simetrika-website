@@ -3,7 +3,7 @@
    Light Theme with Blue Accents
    ============================================ */
 
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Outfit:wght@300;400;500;600;700;800;900&display=swap');
+
 
 /* ---- CSS Variables ---- */
 :root {
@@ -499,7 +499,6 @@ h6 {
   position: absolute;
   border: 1px solid rgba(0, 153, 226, 0.15);
   border-radius: var(--radius);
-  animation: float 20s ease-in-out infinite;
 }
 
 .hero-shape:nth-child(1) {
