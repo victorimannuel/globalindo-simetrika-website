@@ -1,0 +1,312 @@
+// ============================================
+// PT. GLOBALINDO SIMETRIKA - i18n Translation
+// ============================================
+
+const translations = {
+    // ---- NAVBAR ----
+    "nav.home": { en: "Home", id: "Beranda" },
+    "nav.about": { en: "About", id: "Tentang" },
+    "nav.services": { en: "Services", id: "Layanan" },
+    "nav.portfolio": { en: "Portfolio", id: "Portofolio" },
+    "nav.team": { en: "Team", id: "Tim" },
+    "nav.contact": { en: "Contact", id: "Kontak" },
+
+    // ---- HOME PAGE ----
+    "hero.badge": { en: "PT. Globalindo Simetrika", id: "PT. Globalindo Simetrika" },
+    "hero.title1": { en: "Your Preferred Partner In", id: "Mitra Terpercaya Anda Dalam" },
+    "hero.title2": { en: "Industrial Supply", id: "Penyediaan Industri" },
+    "hero.title3": { en: "and Repair Solution", id: "dan Solusi Perbaikan" },
+    "hero.desc": {
+        en: "A company engaged in Service and Procurement of Civil, Mechanical, Electrical & Instrumentation works — supported by professional expertise and adequate equipment facilities.",
+        id: "Perusahaan yang bergerak di bidang Jasa dan Pengadaan pekerjaan Sipil, Mekanikal, Elektrikal & Instrumentasi — didukung oleh tenaga profesional dan fasilitas peralatan yang memadai."
+    },
+    "hero.btn.learn": { en: "Learn More ›", id: "Selengkapnya ›" },
+    "hero.btn.services": { en: "Our Services", id: "Layanan Kami" },
+    "hero.stat.years": { en: "Years Experience", id: "Tahun Pengalaman" },
+    "hero.stat.projects": { en: "Major Projects", id: "Proyek Besar" },
+    "hero.stat.clients": { en: "Trusted Clients", id: "Klien Terpercaya" },
+    "hero.stat.offices": { en: "Office Locations", id: "Lokasi Kantor" },
+
+    // ---- ABOUT PREVIEW (HOME) ----
+    "home.about.label": { en: "About Our Company", id: "Tentang Perusahaan Kami" },
+    "home.about.title": { en: "PT. Global Indo Simetrika", id: "PT. Global Indo Simetrika" },
+    "home.about.p1": {
+        en: "PT. Global Indo Simetrika is a company engaged in Service and Procurement of Civil, Mechanical, Electrical & Instrumentation works. Supported by professional and experienced human resource and adequate equipment facilities.",
+        id: "PT. Global Indo Simetrika adalah perusahaan yang bergerak di bidang Jasa dan Pengadaan pekerjaan Sipil, Mekanikal, Elektrikal & Instrumentasi. Didukung oleh sumber daya manusia yang profesional dan berpengalaman serta fasilitas peralatan yang memadai."
+    },
+    "home.about.p2": {
+        en: "We are committed to providing qualified and timely services to ensure customer satisfaction.",
+        id: "Kami berkomitmen memberikan layanan yang berkualitas dan tepat waktu untuk memastikan kepuasan pelanggan."
+    },
+    "home.about.btn": { en: "Read More ›", id: "Baca Selengkapnya ›" },
+
+    // ---- SERVICES ----
+    "services.label": { en: "What We Do", id: "Apa Yang Kami Kerjakan" },
+    "services.title": { en: "Our Offered Services", id: "Layanan Yang Kami Tawarkan" },
+    "services.subtitle": {
+        en: "Comprehensive solutions across Electrical, Mechanical, Civil, and Procurement — delivering quality and reliability to Indonesia's industrial sector.",
+        id: "Solusi komprehensif di bidang Elektrikal, Mekanikal, Sipil, dan Pengadaan — memberikan kualitas dan keandalan untuk sektor industri Indonesia."
+    },
+    "service.electrical": { en: "Electrical & Instrumentation", id: "Elektrikal & Instrumentasi" },
+    "service.electrical.1": { en: "Electrical Installation", id: "Instalasi Listrik" },
+    "service.electrical.2": { en: "Air Conditioning System", id: "Sistem Pendingin Udara" },
+    "service.electrical.3": { en: "PLC Automation System", id: "Sistem Otomasi PLC" },
+    "service.electrical.4": { en: "Powerplant Control Equipment Repair", id: "Perbaikan Peralatan Kontrol Pembangkit Listrik" },
+    "service.mechanical": { en: "Mechanical", id: "Mekanikal" },
+    "service.mechanical.1": { en: "Repair service for Rotating Systems, Gearboxes", id: "Layanan perbaikan Sistem Rotasi, Gearbox" },
+    "service.mechanical.2": { en: "Welding and Fabrication", id: "Pengelasan dan Fabrikasi" },
+    "service.mechanical.3": { en: "Elevator, Hoist Installation & Maintenance Services", id: "Instalasi Elevator, Hoist & Layanan Perawatan" },
+    "service.civil": { en: "Civil Work", id: "Pekerjaan Sipil" },
+    "service.civil.1": { en: "Construction service for Industry, Warehouse, Etc.", id: "Jasa Konstruksi untuk Industri, Gudang, Dll." },
+    "service.civil.2": { en: "Land Clearing", id: "Pembersihan Lahan" },
+    "service.civil.3": { en: "Road Work", id: "Pekerjaan Jalan" },
+    "service.procurement": { en: "Procurement", id: "Pengadaan" },
+    "service.procurement.1": { en: "Industrial Equipment Supply", id: "Penyediaan Peralatan Industri" },
+    "service.procurement.2": { en: "Automation / Control Card", id: "Kartu Otomasi / Kontrol" },
+    "service.procurement.3": { en: "Valves", id: "Katup (Valve)" },
+    "service.procurement.4": { en: "Etc.", id: "Dll." },
+
+    // ---- CLIENTS ----
+    "clients.label": { en: "Our Clients", id: "Klien Kami" },
+    "clients.title": { en: "Trusted by Leading Companies", id: "Dipercaya oleh Perusahaan Terkemuka" },
+    "clients.subtitle": {
+        en: "We provide engineering, repair and maintenance services for hydro, gas, steam power generation units across Indonesia.",
+        id: "Kami menyediakan layanan rekayasa, perbaikan dan pemeliharaan untuk unit pembangkit listrik hidro, gas, dan uap di seluruh Indonesia."
+    },
+
+    // ---- CTA ----
+    "cta.ready.title": { en: "Ready to Partner With Us?", id: "Siap Bermitra Dengan Kami?" },
+    "cta.ready.desc": {
+        en: "With our expertise and dedication, we look forward to supporting your needs through strong and reliable cooperation.",
+        id: "Dengan keahlian dan dedikasi kami, kami siap mendukung kebutuhan Anda melalui kerjasama yang kuat dan terpercaya."
+    },
+    "cta.contact": { en: "Contact Us ›", id: "Hubungi Kami ›" },
+
+    // ---- FOOTER ----
+    "footer.desc": {
+        en: "Your Preferred Partner in Industrial Supply and Repair Solution. Committed to providing qualified and timely services to ensure customer satisfaction.",
+        id: "Mitra Pilihan Anda dalam Penyediaan Industri dan Solusi Perbaikan. Berkomitmen memberikan layanan berkualitas dan tepat waktu untuk kepuasan pelanggan."
+    },
+    "footer.quicklinks": { en: "Quick Links", id: "Tautan Cepat" },
+    "footer.services": { en: "Services", id: "Layanan" },
+    "footer.headoffice": { en: "Head Office", id: "Kantor Pusat" },
+    "footer.aboutus": { en: "About Us", id: "Tentang Kami" },
+    "footer.ourteam": { en: "Our Team", id: "Tim Kami" },
+    "footer.copyright": { en: "© 2025 PT. Globalindo Simetrika. All rights reserved.", id: "© 2025 PT. Globalindo Simetrika. Hak cipta dilindungi." },
+    "footer.tagline": { en: "Industrial Supply & Repair Solution", id: "Penyediaan Industri & Solusi Perbaikan" },
+
+    // ---- ABOUT PAGE ----
+    "about.breadcrumb": { en: "About Us", id: "Tentang Kami" },
+    "about.header.title1": { en: "About Our", id: "Tentang" },
+    "about.header.title2": { en: "Company", id: "Perusahaan Kami" },
+    "about.header.desc": {
+        en: "Professional and experienced — delivering qualified industrial solutions across Indonesia.",
+        id: "Profesional dan berpengalaman — memberikan solusi industri berkualitas di seluruh Indonesia."
+    },
+    "about.who.label": { en: "Who We Are", id: "Siapa Kami" },
+    "about.vm.label": { en: "Our Vision and Mission", id: "Visi dan Misi Kami" },
+    "about.vm.title": { en: "Driving Excellence in Every Project", id: "Mendorong Keunggulan di Setiap Proyek" },
+    "about.vision.title": { en: "🔭 Vision", id: "🔭 Visi" },
+    "about.vision.desc": {
+        en: "To become one of the most trusted and professional companies in Indonesia.",
+        id: "Menjadi salah satu perusahaan paling terpercaya dan profesional di Indonesia."
+    },
+    "about.mission.title": { en: "🎯 Mission", id: "🎯 Misi" },
+    "about.mission.desc": {
+        en: "To serve our customers and partners as the most trusted and reliable partner by achieving leading position in all relevant markets and categories driven by a passionate and dedicated team.",
+        id: "Melayani pelanggan dan mitra kami sebagai partner yang paling terpercaya dan andal dengan mencapai posisi terdepan di semua pasar dan kategori yang relevan, didorong oleh tim yang penuh semangat dan dedikasi."
+    },
+    "about.legal.label": { en: "Legalities", id: "Legalitas" },
+    "about.legal.title": { en: "Our Legal Standing", id: "Status Hukum Kami" },
+    "about.cert.label": { en: "Certification", id: "Sertifikasi" },
+    "about.cert.title": { en: "Quality Certifications", id: "Sertifikasi Mutu" },
+    "about.cert.iso": { en: "ISO Certification", id: "Sertifikasi ISO" },
+    "about.cert.csms": { en: "CSMS Certificate", id: "Sertifikat CSMS" },
+    "about.cert.smk3": { en: "SMK3 Certificate", id: "Sertifikat SMK3" },
+    "about.award.label": { en: "Achievement", id: "Pencapaian" },
+    "about.award.title": { en: "Awards & Recognition", id: "Penghargaan & Pengakuan" },
+    "about.award.construction23": { en: "Best Construction Provider", id: "Penyedia Konstruksi Terbaik" },
+    "about.award.performance23": { en: "Best Performance", id: "Kinerja Terbaik" },
+    "about.award.construction24": { en: "Best Construction Provider", id: "Penyedia Konstruksi Terbaik" },
+    "about.award.sales25": { en: "Best Sales Award", id: "Penghargaan Penjualan Terbaik" },
+    "about.award.year": { en: "Year", id: "Tahun" },
+
+    // ---- SERVICES PAGE ----
+    "services.breadcrumb": { en: "Services", id: "Layanan" },
+    "services.header.title1": { en: "Our Offered", id: "Layanan Yang" },
+    "services.header.title2": { en: "Services", id: "Kami Tawarkan" },
+    "services.header.desc": {
+        en: "Comprehensive solutions in Electrical, Mechanical, Civil, and Procurement — delivering quality and reliability.",
+        id: "Solusi komprehensif di bidang Elektrikal, Mekanikal, Sipil, dan Pengadaan — memberikan kualitas dan keandalan."
+    },
+    "services.why.label": { en: "Why Choose Us", id: "Mengapa Memilih Kami" },
+    "services.why.title": { en: "Our Competitive Advantages", id: "Keunggulan Kompetitif Kami" },
+    "services.why.team.title": { en: "Professional Team", id: "Tim Profesional" },
+    "services.why.team.1": { en: "Experienced engineers and technicians", id: "Insinyur dan teknisi berpengalaman" },
+    "services.why.team.2": { en: "Certified safety professionals", id: "Profesional keselamatan bersertifikat" },
+    "services.why.team.3": { en: "Dedicated project management", id: "Manajemen proyek yang berdedikasi" },
+    "services.why.cert.title": { en: "Quality Certified", id: "Bersertifikat Mutu" },
+    "services.why.partner.title": { en: "Trusted Partnerships", id: "Kemitraan Terpercaya" },
+    "services.why.partner.1": { en: "Working with PLN Group", id: "Bekerja sama dengan Grup PLN" },
+    "services.why.partner.2": { en: "Serving Pertamina and Freeport", id: "Melayani Pertamina dan Freeport" },
+    "services.why.partner.3": { en: "Long-term client relationships", id: "Hubungan klien jangka panjang" },
+    "services.why.location.title": { en: "Strategic Locations", id: "Lokasi Strategis" },
+    "services.why.location.1": { en: "Head Office in Bandung", id: "Kantor Pusat di Bandung" },
+    "services.why.location.2": { en: "Branch offices near power plants", id: "Kantor cabang dekat pembangkit listrik" },
+    "services.why.location.3": { en: "Workshop with full facilities", id: "Workshop dengan fasilitas lengkap" },
+    "services.cta.title": { en: "Need Our Services?", id: "Butuh Layanan Kami?" },
+    "services.cta.desc": {
+        en: "Let us support your industrial needs with professional engineering and maintenance solutions.",
+        id: "Biarkan kami mendukung kebutuhan industri Anda dengan solusi rekayasa dan pemeliharaan profesional."
+    },
+    "services.cta.btn": { en: "Get In Touch ›", id: "Hubungi Kami ›" },
+
+    // ---- PORTFOLIO PAGE ----
+    "portfolio.breadcrumb": { en: "Portfolio", id: "Portofolio" },
+    "portfolio.header.title1": { en: "Our", id: "Portofolio" },
+    "portfolio.header.title2": { en: "Portfolio", id: "Kami" },
+    "portfolio.header.desc": {
+        en: "A showcase of our completed projects across various industries and disciplines throughout Indonesia.",
+        id: "Showcase proyek-proyek yang telah kami selesaikan di berbagai industri dan disiplin ilmu di seluruh Indonesia."
+    },
+    "portfolio.projects.label": { en: "Projects", id: "Proyek" },
+    "portfolio.projects.title": { en: "Electrical & Instrumentation Projects", id: "Proyek Elektrikal & Instrumentasi" },
+    "portfolio.filter.all": { en: "All Projects", id: "Semua Proyek" },
+    "portfolio.filter.electrical": { en: "Electrical & Instrumentation", id: "Elektrikal & Instrumentasi" },
+    "portfolio.filter.mechanical": { en: "Mechanical", id: "Mekanikal" },
+    "portfolio.filter.civil": { en: "Civil Work", id: "Pekerjaan Sipil" },
+    "portfolio.other.label": { en: "Other Projects", id: "Proyek Lainnya" },
+    "portfolio.other.title": { en: "Automation Solutions Across Indonesia", id: "Solusi Otomasi di Seluruh Indonesia" },
+    "portfolio.other.subtitle": {
+        en: "We also provide automation solutions for various industries across Indonesia.",
+        id: "Kami juga menyediakan solusi otomasi untuk berbagai industri di seluruh Indonesia."
+    },
+    "portfolio.cta.title": { en: "Have a Project in Mind?", id: "Punya Proyek yang Direncanakan?" },
+    "portfolio.cta.desc": {
+        en: "Let us help you bring your industrial project to life with our expert engineering team.",
+        id: "Biarkan kami membantu mewujudkan proyek industri Anda dengan tim engineering ahli kami."
+    },
+    "portfolio.cta.btn": { en: "Discuss Your Project ›", id: "Diskusikan Proyek Anda ›" },
+
+    // ---- TEAM PAGE ----
+    "team.breadcrumb": { en: "Our Team", id: "Tim Kami" },
+    "team.header.title1": { en: "Our Management", id: "Tim Manajemen" },
+    "team.header.title2": { en: "Team", id: "Kami" },
+    "team.header.desc": {
+        en: "Meet the experienced professionals driving our company forward with passion and dedication.",
+        id: "Kenali para profesional berpengalaman yang mendorong perusahaan kami maju dengan semangat dan dedikasi."
+    },
+    "team.leadership.label": { en: "Leadership", id: "Kepemimpinan" },
+    "team.leadership.title": { en: "Company Director", id: "Direktur Perusahaan" },
+    "team.management.label": { en: "Management", id: "Manajemen" },
+    "team.management.title": { en: "Management Team", id: "Tim Manajemen" },
+    "team.officers.label": { en: "Key Officers", id: "Pejabat Kunci" },
+    "team.officers.title": { en: "Senior Officers", id: "Pejabat Senior" },
+    "team.role.director": { en: "Director", id: "Direktur" },
+    "team.role.finance": { en: "Finance Manager", id: "Manajer Keuangan" },
+    "team.role.marketing": { en: "Marketing Manager", id: "Manajer Pemasaran" },
+    "team.role.hse": { en: "HSE Manager", id: "Manajer HSE" },
+    "team.role.office": { en: "Office Manager", id: "Manajer Kantor" },
+    "team.role.purchasing": { en: "Chief Purchasing Officer", id: "Kepala Pengadaan" },
+    "team.role.engineer": { en: "Chief Engineer", id: "Kepala Insinyur" },
+    "team.role.intl": { en: "International Relation Officer", id: "Pejabat Hubungan Internasional" },
+    "team.cta.title": { en: "Join Our Team", id: "Bergabung dengan Tim Kami" },
+    "team.cta.desc": {
+        en: "We're always looking for talented professionals to join our growing team of engineers and specialists.",
+        id: "Kami selalu mencari profesional berbakat untuk bergabung dengan tim insinyur dan spesialis kami yang terus berkembang."
+    },
+
+    // ---- CONTACT PAGE ----
+    "contact.breadcrumb": { en: "Contact", id: "Kontak" },
+    "contact.header.title1": { en: "Get In", id: "Hubungi" },
+    "contact.header.title2": { en: "Touch", id: "Kami" },
+    "contact.header.desc": {
+        en: "We operate through our head office and several branch offices to ensure efficient support and service.",
+        id: "Kami beroperasi melalui kantor pusat dan beberapa kantor cabang untuk memastikan dukungan dan layanan yang efisien."
+    },
+    "contact.offices.label": { en: "Our Offices", id: "Kantor Kami" },
+    "contact.offices.title": { en: "Office Locations", id: "Lokasi Kantor" },
+    "contact.offices.subtitle": {
+        en: "We operate through our head office and several branch offices to ensure efficient support and service for our clients.",
+        id: "Kami beroperasi melalui kantor pusat dan beberapa kantor cabang untuk memastikan dukungan dan layanan yang efisien bagi klien kami."
+    },
+    "contact.office.head": { en: "⭐ Head Office", id: "⭐ Kantor Pusat" },
+    "contact.office.workshop": { en: "🔧 Workshop", id: "🔧 Workshop" },
+    "contact.office.branch": { en: "📍 Branch Office", id: "📍 Kantor Cabang" },
+    "contact.form.label": { en: "Send Us a Message", id: "Kirim Pesan" },
+    "contact.form.title": { en: "Let's Discuss Your Project", id: "Mari Diskusikan Proyek Anda" },
+    "contact.form.desc": {
+        en: "With our expertise and dedication, we look forward to supporting your needs through strong and reliable cooperation.",
+        id: "Dengan keahlian dan dedikasi kami, kami siap mendukung kebutuhan Anda melalui kerjasama yang kuat dan terpercaya."
+    },
+    "contact.form.name": { en: "Your Name", id: "Nama Anda" },
+    "contact.form.email": { en: "Your Email", id: "Email Anda" },
+    "contact.form.subject": { en: "Subject", id: "Subjek" },
+    "contact.form.message": { en: "Your Message", id: "Pesan Anda" },
+    "contact.form.submit": { en: "Send Message ›", id: "Kirim Pesan ›" },
+    "contact.info.label": { en: "Company Information", id: "Informasi Perusahaan" },
+    "contact.info.title": { en: "Quick Info", id: "Info Singkat" },
+    "contact.info.certs": { en: "🏅 Certifications", id: "🏅 Sertifikasi" },
+    "contact.thankyou.title": { en: "Thank You", id: "Terima Kasih" },
+    "contact.thankyou.desc": {
+        en: "With our expertise and dedication, we look forward to supporting your needs through strong and reliable cooperation.",
+        id: "Dengan keahlian dan dedikasi kami, kami siap mendukung kebutuhan Anda melalui kerjasama yang kuat dan terpercaya."
+    },
+    "contact.thankyou.regards": { en: "— Kind Regards —", id: "— Salam Hangat —" },
+};
+
+// ---- i18n Engine ----
+function setLanguage(lang) {
+    localStorage.setItem('gs-lang', lang);
+
+    // Update all elements with data-i18n
+    document.querySelectorAll('[data-i18n]').forEach(el => {
+        const key = el.getAttribute('data-i18n');
+        if (translations[key] && translations[key][lang]) {
+            el.textContent = translations[key][lang];
+        }
+    });
+
+    // Update all elements with data-i18n-placeholder
+    document.querySelectorAll('[data-i18n-placeholder]').forEach(el => {
+        const key = el.getAttribute('data-i18n-placeholder');
+        if (translations[key] && translations[key][lang]) {
+            el.placeholder = translations[key][lang];
+        }
+    });
+
+    // Update all elements with data-i18n-html (for elements with mixed HTML)
+    document.querySelectorAll('[data-i18n-html]').forEach(el => {
+        const key = el.getAttribute('data-i18n-html');
+        if (translations[key] && translations[key][lang]) {
+            el.innerHTML = translations[key][lang];
+        }
+    });
+
+    // Update toggle button state
+    document.querySelectorAll('.lang-toggle').forEach(toggle => {
+        const enBtn = toggle.querySelector('[data-lang="en"]');
+        const idBtn = toggle.querySelector('[data-lang="id"]');
+        if (enBtn && idBtn) {
+            enBtn.classList.toggle('active', lang === 'en');
+            idBtn.classList.toggle('active', lang === 'id');
+        }
+    });
+}
+
+function getCurrentLang() {
+    return localStorage.getItem('gs-lang') || 'en';
+}
+
+// Init on DOM ready
+document.addEventListener('DOMContentLoaded', () => {
+    // Set initial language
+    setLanguage(getCurrentLang());
+
+    // Bind toggle buttons
+    document.querySelectorAll('.lang-toggle [data-lang]').forEach(btn => {
+        btn.addEventListener('click', () => {
+            setLanguage(btn.getAttribute('data-lang'));
+        });
+    });
+});
