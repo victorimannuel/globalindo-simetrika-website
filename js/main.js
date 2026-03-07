@@ -191,7 +191,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 <div class="lightbox-inner" style="padding: 40px;">
                     <div class="lightbox-icon" style="font-size: 4rem; margin-bottom: 20px;">🏗️</div>
                     <div class="lightbox-info" style="padding: 0;">
-                        <p class="lightbox-category" style="display:inline-block; padding: 6px 16px; background: var(--blue-pale); color: var(--blue-light); border-radius: 100px; font-weight: 600; font-size: 0.85rem; text-transform: uppercase; margin-bottom: 20px;"></p>
+                        <p class="lightbox-category" style="display:inline-block; padding: 6px 16px; background: var(--blue-pale); color: var(--blue-light); border-radius: 4px; font-weight: 600; font-size: 0.85rem; text-transform: uppercase; margin-bottom: 20px;"></p>
                         <h3 class="lightbox-title" style="color: var(--blue-dark); font-size: 1.8rem; line-height: 1.4; margin-bottom: 20px;"></h3>
                         <p style="color: var(--text-body); font-size: 1.05rem;" class="lightbox-desc">More details and documentation for this project are currently being prepared and will be updated soon. Thank you for your interest.</p>
                     </div>
