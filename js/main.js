@@ -189,7 +189,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 <button class="lightbox-close">&times;</button>
                 <div class="lightbox-gallery" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 10px; max-height: 50vh; overflow-y: auto; background: var(--bg-color);"></div>
                 <div class="lightbox-inner" style="padding: 40px;">
-                    <div class="lightbox-icon" style="font-size: 4rem; margin-bottom: 20px;">🏗️</div>
+                    <div class="lightbox-icon" style="font-size: 4rem; margin-bottom: 20px;"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 14.76V3.5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h4a2 2 0 0 0 2-2"></path><path d="M22 10.33V20a2 2 0 0 1-2 2h-4a2 2 0 0 1-2-2v-9.67"></path><path d="M2 22h20"></path></svg></div>
                     <div class="lightbox-info" style="padding: 0;">
                         <p class="lightbox-category" style="display:inline-block; padding: 6px 16px; background: var(--blue-pale); color: var(--blue-light); border-radius: 4px; font-weight: 600; font-size: 0.85rem; text-transform: uppercase; margin-bottom: 20px;"></p>
                         <h3 class="lightbox-title" style="color: var(--blue-dark); font-size: 1.8rem; line-height: 1.4; margin-bottom: 20px;"></h3>
@@ -261,11 +261,11 @@ document.addEventListener('DOMContentLoaded', () => {
             } else {
                 // Discover icon based on category string
                 if (category.toLowerCase().includes('electrical')) {
-                    lightboxIcon.textContent = '⚡';
+                    lightboxIcon.textContent = '<svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon></svg>';
                 } else if (category.toLowerCase().includes('mechanical')) {
-                    lightboxIcon.textContent = '⚙️';
+                    lightboxIcon.textContent = '<svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"></circle><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"></path></svg>';
                 } else {
-                    lightboxIcon.textContent = '🏗️';
+                    lightboxIcon.textContent = '<svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 14.76V3.5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h4a2 2 0 0 0 2-2"></path><path d="M22 10.33V20a2 2 0 0 1-2 2h-4a2 2 0 0 1-2-2v-9.67"></path><path d="M2 22h20"></path></svg>';
                 }
                 lightboxGallery.style.display = 'none';
                 lightboxIcon.style.display = 'block';
@@ -277,4 +277,23 @@ document.addEventListener('DOMContentLoaded', () => {
             lightbox.classList.add('active');
         });
     });
+
+    // ---- Single Source of Truth for Dynamic Data ----
+    const syncConfig = () => {
+        if (typeof CONFIG !== 'undefined') {
+            // Update all WhatsApp links
+            document.querySelectorAll('a[href*="wa.me"]').forEach(link => {
+                const currentHref = link.getAttribute('href');
+                if (currentHref.includes('wa.me')) {
+                    link.setAttribute('href', `https://wa.me/${CONFIG.whatsappNumber}`);
+                }
+            });
+
+            // Update email links if any
+            document.querySelectorAll('a[href^="mailto:"]').forEach(link => {
+                link.setAttribute('href', `mailto:${CONFIG.email}`);
+            });
+        }
+    };
+    syncConfig();
 });

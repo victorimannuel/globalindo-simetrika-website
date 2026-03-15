@@ -47,24 +47,7 @@ const translations = {
         en: "Comprehensive solutions across Electrical, Mechanical, Civil, and Procurement — delivering quality and reliability to Indonesia's industrial sector.",
         id: "Solusi komprehensif di bidang Elektrikal, Mekanikal, Sipil, dan Pengadaan — memberikan kualitas dan keandalan untuk sektor industri Indonesia."
     },
-    "service.electrical": { en: "Electrical & Instrumentation", id: "Elektrikal & Instrumentasi" },
-    "service.electrical.1": { en: "Electrical Installation", id: "Instalasi Listrik" },
-    "service.electrical.2": { en: "Air Conditioning System", id: "Sistem Pendingin Udara" },
-    "service.electrical.3": { en: "PLC Automation System", id: "Sistem Otomasi PLC" },
-    "service.electrical.4": { en: "Powerplant Control Equipment Repair", id: "Perbaikan Peralatan Kontrol Pembangkit Listrik" },
-    "service.mechanical": { en: "Mechanical", id: "Mekanikal" },
-    "service.mechanical.1": { en: "Repair service for Rotating Systems, Gearboxes", id: "Layanan perbaikan Sistem Rotasi, Gearbox" },
-    "service.mechanical.2": { en: "Welding and Fabrication", id: "Pengelasan dan Fabrikasi" },
-    "service.mechanical.3": { en: "Elevator, Hoist Installation & Maintenance Services", id: "Instalasi Elevator, Hoist & Layanan Perawatan" },
-    "service.civil": { en: "Civil Work", id: "Pekerjaan Sipil" },
-    "service.civil.1": { en: "Construction service for Industry, Warehouse, Etc.", id: "Jasa Konstruksi untuk Industri, Gudang, Dll." },
-    "service.civil.2": { en: "Land Clearing", id: "Pembersihan Lahan" },
-    "service.civil.3": { en: "Road Work", id: "Pekerjaan Jalan" },
-    "service.procurement": { en: "Procurement", id: "Pengadaan" },
-    "service.procurement.1": { en: "Industrial Equipment Supply", id: "Penyediaan Peralatan Industri" },
-    "service.procurement.2": { en: "Automation / Control Card", id: "Kartu Otomasi / Kontrol" },
-    "service.procurement.3": { en: "Valves", id: "Katup (Valve)" },
-    "service.procurement.4": { en: "Etc.", id: "Dll." },
+
 
     // ---- CLIENTS ----
     "clients.label": { en: "Our Clients", id: "Klien Kami" },
@@ -230,9 +213,9 @@ const translations = {
         en: "We operate through our head office and several branch offices to ensure efficient support and service for our clients.",
         id: "Kami beroperasi melalui kantor pusat dan beberapa kantor cabang untuk memastikan dukungan dan layanan yang efisien bagi klien kami."
     },
-    "contact.office.head": { en: "⭐ Head Office", id: "⭐ Kantor Pusat" },
-    "contact.office.workshop": { en: "🔧 Workshop", id: "🔧 Workshop" },
-    "contact.office.branch": { en: "📍 Branch Office", id: "📍 Kantor Cabang" },
+    "contact.office.head": { en: '<svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg> Head Office', id: '<svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg> Kantor Pusat' },
+    "contact.office.workshop": { en: '<svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"></path></svg> Workshop', id: '<svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"></path></svg> Workshop' },
+    "contact.office.branch": { en: '<svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg> Branch Office', id: '<svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg> Kantor Cabang' },
     "contact.form.label": { en: "Send Us a Message", id: "Kirim Pesan" },
     "contact.form.title": { en: "Let's Discuss Your Project", id: "Mari Diskusikan Proyek Anda" },
     "contact.form.desc": {
@@ -246,7 +229,7 @@ const translations = {
     "contact.form.submit": { en: "Send Message ›", id: "Kirim Pesan ›" },
     "contact.info.label": { en: "Company Information", id: "Informasi Perusahaan" },
     "contact.info.title": { en: "Quick Info", id: "Info Singkat" },
-    "contact.info.certs": { en: "🏅 Certifications", id: "🏅 Sertifikasi" },
+    "contact.info.certs": { en: '<svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="7"></circle><polyline points="8.21 13.89 7 23 12 20 17 23 15.79 13.88"></polyline></svg> Certifications', id: '<svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="7"></circle><polyline points="8.21 13.89 7 23 12 20 17 23 15.79 13.88"></polyline></svg> Sertifikasi' },
     "contact.thankyou.title": { en: "Thank You", id: "Terima Kasih" },
     "contact.thankyou.desc": {
         en: "With our expertise and dedication, we look forward to supporting your needs through strong and reliable cooperation.",
