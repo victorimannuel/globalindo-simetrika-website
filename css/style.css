@@ -2082,24 +2082,43 @@ h6 {
 }
 
 @media (max-width: 768px) {
+  /* Unify Mobile Navbar to a Single Solid Color */
+  .navbar {
+    background: var(--blue-dark) !important;
+    padding: 12px 0 !important;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    box-shadow: var(--shadow-md);
+  }
+
+  /* Ensure brand and toggle are always visible on the dark background */
+  .navbar .nav-logo {
+    color: var(--white) !important;
+  }
+
+  .navbar .nav-toggle span {
+    background: var(--white) !important;
+  }
+
   .nav-menu {
     position: fixed;
     top: 0;
     right: -100%;
     width: 280px;
     height: 100vh;
-    background: rgba(255, 255, 255, 0.98);
-    backdrop-filter: blur(20px);
+    background: var(--blue-dark); /* Solid single color */
     flex-direction: column;
     align-items: stretch;
     padding: 100px 32px 40px;
     transition: var(--transition);
-    border-left: 1px solid var(--border);
-    box-shadow: -10px 0 40px rgba(14, 39, 71, 0.1);
+    border-left: 1px solid rgba(255, 255, 255, 0.1);
+    box-shadow: -10px 0 40px rgba(0, 0, 0, 0.4);
+    z-index: 1000;
   }
 
-  .hero-page .nav-menu {
-    background: rgba(14, 39, 71, 0.98);
+  /* Override the hero-page specific transparency/color for mobile */
+  .hero-page .nav-menu,
+  .nav-menu {
+    background: var(--blue-dark) !important;
   }
 
   .nav-menu.open {
@@ -2110,6 +2129,46 @@ h6 {
     display: flex;
   }
 
+  /* Improved Mobile Link Styles */
+  .nav-link {
+    color: rgba(255, 255, 255, 0.8) !important;
+    padding: 16px 0 !important;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+    font-size: 1.05rem !important;
+    font-weight: 500 !important;
+    border-radius: 0 !important;
+    background: transparent !important;
+  }
+
+  .nav-link:hover,
+  .nav-link.active {
+    color: var(--white) !important;
+    padding-left: 8px !important;
+  }
+
+  .nav-link.active::after {
+    display: none; /* Hide the desktop active indicator underline */
+  }
+
+  /* Language Toggle Mobile Adjustments */
+  .lang-toggle {
+    margin: 24px 0 0 0 !important;
+    background: rgba(255, 255, 255, 0.05) !important;
+    border-color: rgba(255, 255, 255, 0.1) !important;
+    justify-content: center;
+  }
+
+  .lang-toggle button {
+    flex: 1;
+    color: rgba(255, 255, 255, 0.6) !important;
+  }
+
+  .lang-toggle button.active {
+    background: var(--white) !important;
+    color: var(--blue-dark) !important;
+  }
+
+  /* Layout Adjustments */
   .about-grid {
     grid-template-columns: 1fr;
     gap: 40px;
