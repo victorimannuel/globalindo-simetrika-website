@@ -312,15 +312,32 @@ document.addEventListener('DOMContentLoaded', () => {
 
     const imageModal = createImageModal();
 
-    document.querySelectorAll('.image-popup-trigger').forEach(trigger => {
-        trigger.addEventListener('click', () => {
+    // Use event delegation for better reliability (handles dynamically added content or late script execution)
+    document.addEventListener('click', (e) => {
+        const trigger = e.target.closest('.image-popup-trigger');
+        if (trigger) {
             const imgSrc = trigger.getAttribute('data-image');
             if (imgSrc) {
                 imageModal.img.src = imgSrc;
                 imageModal.modal.classList.add('active');
+                // Ensure the image exists or show error/loading?
+            }
+        }
+    });
+
+    // Custom Cursor Interactions (update trackHover to include popups)
+    const updateCursorTracking = () => {
+        const interactiveElements = document.querySelectorAll('a, button, .team-card, .service-card, .client-card, .portfolio-card, .image-popup-trigger');
+        interactiveElements.forEach(el => {
+            if (!el.dataset.cursorTracked) {
+                el.addEventListener('mouseenter', () => document.body.classList.add('custom-cursor-hover'));
+                el.addEventListener('mouseleave', () => document.body.classList.remove('custom-cursor-hover'));
+                el.dataset.cursorTracked = true;
             }
         });
-    });
+    };
+    updateCursorTracking();
+    setInterval(updateCursorTracking, 2000);
 
     // ---- Single Source of Truth for Dynamic Data ----
     const syncConfig = () => {
