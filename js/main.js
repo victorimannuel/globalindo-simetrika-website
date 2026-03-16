@@ -294,6 +294,9 @@ document.addEventListener('DOMContentLoaded', () => {
                 link.setAttribute('href', `mailto:${CONFIG.email}`);
             });
         }
+        
+        // Forcibly remove WhatsApp floating button if it exists
+        document.querySelectorAll('.whatsapp-float').forEach(el => el.remove());
     };
     syncConfig();
 });
