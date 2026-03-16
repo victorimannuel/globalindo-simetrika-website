@@ -1367,8 +1367,77 @@ h6 {
 
 .lightbox-info p {
   color: var(--text-body);
-  font-size: 1rem;
+  font-size: 0.95rem;
   line-height: 1.6;
+}
+
+/* Image Popup Modal */
+.image-modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(14, 39, 71, 0.9);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 11000;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease;
+  backdrop-filter: blur(5px);
+}
+
+.image-modal.active {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.image-modal-content {
+  position: relative;
+  max-width: 90vw;
+  max-height: 90vh;
+  transform: scale(0.9);
+  transition: transform 0.3s ease;
+}
+
+.image-modal.active .image-modal-content {
+  transform: scale(1);
+}
+
+.image-modal-content img {
+  width: auto;
+  height: auto;
+  max-width: 100%;
+  max-height: 90vh;
+  border-radius: 4px;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5);
+  display: block;
+}
+
+.image-modal-close {
+  position: absolute;
+  top: -40px;
+  right: -40px;
+  background: none;
+  border: none;
+  color: #fff;
+  font-size: 2.5rem;
+  cursor: pointer;
+  line-height: 1;
+  transition: transform 0.3s ease;
+}
+
+.image-modal-close:hover {
+  transform: scale(1.2);
+}
+
+@media (max-width: 768px) {
+  .image-modal-close {
+    top: -50px;
+    right: 0;
+  }
 }
 
 /* ============================================
@@ -1443,6 +1512,7 @@ h6 {
 }
 
 @media (max-width: 768px) {
+
   .offices-row-top .office-card,
   .offices-row-bottom .office-card {
     flex: 1 1 100%;
@@ -1519,31 +1589,77 @@ h6 {
 /* ============================================
    CERTIFICATIONS / ACHIEVEMENTS
    ============================================ */
-.cert-grid {
+.cert-grid,
+.achievement-grid,
+.legal-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 24px;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 32px;
+  margin-top: 48px;
 }
 
-.cert-card {
-  padding: 32px;
+/* Unified Info Card Styles (Certificates, Awards, Legalities) */
+.cert-card,
+.achievement-card,
+.legal-card {
+  padding: 32px 24px;
   background: var(--white);
   border: 1px solid var(--border);
   border-radius: var(--radius);
   text-align: center;
   transition: var(--transition);
+  display: flex;
+  flex-direction: column;
+  height: 100%;
 }
 
-.cert-card:hover {
+.cert-card img,
+.achievement-card img,
+.legal-card img {
+  width: 100%;
+  height: 180px;
+  object-fit: contain;
+  margin-bottom: 20px;
+  transition: var(--transition);
+}
+
+.cert-card:hover,
+.achievement-card:hover,
+.legal-card:hover {
   border-color: var(--blue-light);
-  transform: translateY(-4px);
-  box-shadow: var(--shadow);
+  transform: translateY(-8px);
+  box-shadow: var(--shadow-blue);
 }
 
+.cert-card:hover img,
+.achievement-card:hover img,
+.legal-card:hover img {
+  transform: scale(1.05);
+}
+
+.cert-card h4,
+.achievement-card h4,
+.legal-card h4 {
+  font-size: 1rem;
+  color: var(--blue-dark);
+  margin-bottom: 8px;
+  font-weight: 700;
+  line-height: 1.4;
+}
+
+.cert-card p,
+.achievement-card p,
+.legal-card p {
+  font-size: 0.85rem;
+  color: var(--text-muted);
+  line-height: 1.6;
+}
+
+/* Icons if present */
 .cert-icon {
-  width: 56px;
-  height: 56px;
-  background: var(--blue-pale);
+  width: 48px;
+  height: 48px;
+  background: rgba(0, 153, 226, 0.1);
   border-radius: 50%;
   display: flex;
   align-items: center;
@@ -1552,100 +1668,33 @@ h6 {
   font-size: 1.4rem;
 }
 
-.cert-card h4 {
-  font-size: 0.95rem;
-  color: var(--blue-dark);
-  margin-bottom: 8px;
-  font-weight: 700;
-}
-
-.cert-card p {
-  font-size: 0.8rem;
-  color: var(--text-muted);
-  line-height: 1.6;
-}
-
-/* Dark section cert cards */
+/* Dark section variants */
 .section-blue-dark .cert-card,
-.section-blue-gradient .cert-card {
-  background: rgba(255, 255, 255, 0.06);
+.section-blue-gradient .cert-card,
+.section-blue-dark .achievement-card,
+.section-blue-gradient .achievement-card,
+.section-blue-dark .legal-card,
+.section-blue-gradient .legal-card {
+  background: rgba(255, 255, 255, 0.05);
   border-color: rgba(255, 255, 255, 0.1);
 }
 
-.section-blue-dark .cert-card:hover,
-.section-blue-gradient .cert-card:hover {
-  border-color: rgba(0, 153, 226, 0.4);
-}
-
 .section-blue-dark .cert-card h4,
-.section-blue-gradient .cert-card h4 {
+.section-blue-gradient .cert-card h4,
+.section-blue-dark .achievement-card h4,
+.section-blue-gradient .achievement-card h4,
+.section-blue-dark .legal-card h4,
+.section-blue-gradient .legal-card h4 {
   color: var(--white);
 }
 
 .section-blue-dark .cert-card p,
-.section-blue-gradient .cert-card p {
-  color: rgba(255, 255, 255, 0.7);
-}
-
-.section-blue-dark .cert-icon,
-.section-blue-gradient .cert-icon {
-  background: rgba(0, 153, 226, 0.15);
-}
-
-/* Achievement cards */
-.achievement-grid {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 24px;
-  margin-top: 48px;
-}
-
-.achievement-card {
-  padding: 32px 20px;
-  background: rgba(0, 153, 226, 0.08);
-  border: 1px solid rgba(0, 153, 226, 0.2);
-  border-radius: var(--radius);
-  text-align: center;
-  transition: var(--transition);
-}
-
-/* Dark section achievement */
-.section-blue-dark .achievement-card,
-.section-blue-gradient .achievement-card {
-  background: rgba(0, 153, 226, 0.1);
-  border-color: rgba(0, 153, 226, 0.25);
-}
-
-.achievement-card:hover {
-  transform: translateY(-6px);
-  box-shadow: var(--shadow-blue);
-}
-
-.achievement-card .trophy {
-  font-size: 2rem;
-  margin-bottom: 16px;
-}
-
-.achievement-card h4 {
-  font-size: 0.9rem;
-  color: var(--blue-light);
-  font-weight: 700;
-  margin-bottom: 4px;
-}
-
-.achievement-card p {
-  font-size: 0.8rem;
-  color: var(--text-muted);
-}
-
-.section-blue-dark .achievement-card h4,
-.section-blue-gradient .achievement-card h4 {
-  color: var(--blue-soft);
-}
-
+.section-blue-gradient .cert-card p,
 .section-blue-dark .achievement-card p,
-.section-blue-gradient .achievement-card p {
-  color: rgba(255, 255, 255, 0.6);
+.section-blue-gradient .achievement-card p,
+.section-blue-dark .legal-card p,
+.section-blue-gradient .legal-card p {
+  color: rgba(255, 255, 255, 0.7);
 }
 
 /* ============================================
@@ -1766,39 +1815,6 @@ h6 {
   gap: 24px;
 }
 
-.legal-card {
-  padding: 28px;
-  background: var(--white);
-  border: 1px solid var(--border);
-  border-radius: var(--radius);
-}
-
-.legal-card h4 {
-  font-size: 0.9rem;
-  color: var(--blue-light);
-  font-weight: 600;
-  text-transform: uppercase;
-  letter-spacing: 0.05em;
-  margin-bottom: 12px;
-}
-
-.legal-card p {
-  font-size: 0.85rem;
-  color: var(--text-body);
-  line-height: 1.7;
-}
-
-/* Dark section legal cards */
-.section-blue-dark .legal-card,
-.section-blue-gradient .legal-card {
-  background: rgba(255, 255, 255, 0.06);
-  border-color: rgba(255, 255, 255, 0.1);
-}
-
-.section-blue-dark .legal-card p,
-.section-blue-gradient .legal-card p {
-  color: rgba(255, 255, 255, 0.7);
-}
 
 /* ============================================
    FOOTER
@@ -2235,7 +2251,8 @@ h6 {
    WHATSAPP FLOATING BUTTON
    ============================================ */
 .whatsapp-float {
-  display: none !important; /* Temporarily hidden */
+  display: none !important;
+  /* Temporarily hidden */
   position: fixed;
   width: 60px;
   height: 60px;

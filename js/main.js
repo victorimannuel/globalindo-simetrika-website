@@ -278,6 +278,50 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
+    // ---- Image Popup Modal ----
+    const createImageModal = () => {
+        const modal = document.createElement('div');
+        modal.className = 'image-modal';
+        modal.innerHTML = `
+            <div class="image-modal-content">
+                <button class="image-modal-close">&times;</button>
+                <img src="" alt="Full size image">
+            </div>
+        `;
+        document.body.appendChild(modal);
+
+        const img = modal.querySelector('img');
+        const closeBtn = modal.querySelector('.image-modal-close');
+
+        const closeModal = () => {
+            modal.classList.remove('active');
+            setTimeout(() => { img.src = ''; }, 300);
+        };
+
+        closeBtn.addEventListener('click', closeModal);
+        modal.addEventListener('click', (e) => {
+            if (e.target === modal) closeModal();
+        });
+
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape' && modal.classList.contains('active')) closeModal();
+        });
+
+        return { modal, img };
+    };
+
+    const imageModal = createImageModal();
+
+    document.querySelectorAll('.image-popup-trigger').forEach(trigger => {
+        trigger.addEventListener('click', () => {
+            const imgSrc = trigger.getAttribute('data-image');
+            if (imgSrc) {
+                imageModal.img.src = imgSrc;
+                imageModal.modal.classList.add('active');
+            }
+        });
+    });
+
     // ---- Single Source of Truth for Dynamic Data ----
     const syncConfig = () => {
         if (typeof CONFIG !== 'undefined') {

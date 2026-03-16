@@ -103,7 +103,10 @@ const translations = {
     "about.legal.title": { en: "Our Legal Standing", id: "Status Hukum Kami" },
     "about.cert.label": { en: "Certification", id: "Sertifikasi" },
     "about.cert.title": { en: "Quality Certifications", id: "Sertifikasi Mutu" },
-    "about.cert.iso": { en: "ISO Certification", id: "Sertifikasi ISO" },
+    "about.cert.iso9001": { en: "ISO 9001:2015", id: "ISO 9001:2015" },
+    "about.cert.iso14001": { en: "ISO 14001:2015", id: "ISO 14001:2015" },
+    "about.cert.iso45001": { en: "ISO 45001:2018", id: "ISO 45001:2018" },
+    "about.cert.smk3": { en: "SMK3 Certification 2022", id: "Sertifikasi SMK3 2022" },
     "about.cert.csms": { en: "CSMS Certificate", id: "Sertifikat CSMS" },
     "about.cert.smk3": { en: "SMK3 Certificate", id: "Sertifikat SMK3" },
     "about.award.label": { en: "Achievement", id: "Pencapaian" },
@@ -113,6 +116,8 @@ const translations = {
     "about.award.construction24": { en: "Best Construction Provider", id: "Penyedia Konstruksi Terbaik" },
     "about.award.sales25": { en: "Best Sales Award", id: "Penghargaan Penjualan Terbaik" },
     "about.award.year": { en: "Year", id: "Tahun" },
+    "about.docs.label": { en: "Official Documents", id: "Dokumen Resmi" },
+    "about.docs.title": { en: "Certificates & Awards Gallery", id: "Galeri Sertifikat & Penghargaan" },
 
     // ---- SERVICES PAGE ----
     "services.breadcrumb": { en: "Services", id: "Layanan" },
