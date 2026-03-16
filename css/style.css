@@ -729,7 +729,7 @@ h6 {
   position: relative;
   border-radius: var(--radius);
   overflow: hidden;
-  aspect-ratio: 4/3;
+  /* aspect-ratio: 4/3; */
   background: radial-gradient(circle at 30% 30%, rgba(0, 153, 226, 0.15), transparent 60%),
     radial-gradient(circle at 70% 70%, rgba(92, 196, 245, 0.15), transparent 60%),
     var(--blue-pale);
