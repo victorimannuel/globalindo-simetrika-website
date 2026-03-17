@@ -58,6 +58,35 @@ async function loadPartials() {
 }
 
 // ---- Navbar scroll effect + mobile toggle ----
+function injectStructuredData() {
+    const script = document.createElement('script');
+    script.type = 'application/ld+json';
+    script.text = JSON.stringify({
+        "@context": "https://schema.org",
+        "@type": "Organization",
+        "name": "PT. Globalindo Simetrika",
+        "url": "https://globalindosimetrika.co.id/",
+        "logo": "https://globalindosimetrika.co.id/images/logo.webp",
+        "contactPoint": {
+            "@type": "ContactPoint",
+            "telephone": "+62-812-3456-7890",
+            "contactType": "customer service",
+            "areaServed": "ID",
+            "availableLanguage": ["Indonesian", "English"]
+        },
+        "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "Jl. Cibodas Raya Ruko No.1, Antapani Tengah, Antapani, Bandung",
+            "addressLocality": "Bandung",
+            "addressRegion": "Jawa Barat",
+            "postalCode": "40291",
+            "addressCountry": "ID"
+        },
+        "sameAs": []
+    });
+    document.head.appendChild(script);
+}
+
 function initNavbar() {
     const navbar = document.querySelector('.navbar');
     if (navbar) {
@@ -94,6 +123,7 @@ function initNavbar() {
 document.addEventListener('DOMContentLoaded', () => {
     // Load shared partials first (navbar + footer)
     loadPartials();
+    injectStructuredData();
 
     // ---- Scroll animations ----
     const observerOptions = {
@@ -307,49 +337,49 @@ document.addEventListener('DOMContentLoaded', () => {
         const card = e.target.closest('.portfolio-card');
         if (!card) return;
 
-            const title = card.querySelector('h4').textContent;
-            const category = card.querySelector('.card-category').textContent;
+        const title = card.querySelector('h4').textContent;
+        const category = card.querySelector('.card-category').textContent;
 
-            // Check if user has defined a data-image attribute (comma separated)
-            const imageSrcData = card.getAttribute('data-image');
+        // Check if user has defined a data-image attribute (comma separated)
+        const imageSrcData = card.getAttribute('data-image');
 
-            lightboxGallery.innerHTML = ''; // Reset gallery
+        lightboxGallery.innerHTML = ''; // Reset gallery
 
-            if (imageSrcData) {
-                // Show real images, hide placeholder icon
-                const images = imageSrcData.split(',').map(src => src.trim());
+        if (imageSrcData) {
+            // Show real images, hide placeholder icon
+            const images = imageSrcData.split(',').map(src => src.trim());
 
-                if (images.length === 1) {
-                    // Single image - make it wide
-                    lightboxGallery.style.display = 'block';
-                    lightboxGallery.innerHTML = `<img src="${images[0]}" alt="Project Image" style="width: 100%; max-height: 50vh; object-fit: cover; display: block;">`;
-                } else {
-                    // Multiple images - use css grid
-                    lightboxGallery.style.display = 'grid';
-                    images.forEach(src => {
-                        lightboxGallery.innerHTML += `<img src="${src}" alt="Project Image" style="width: 100%; height: 250px; object-fit: cover; display: block;">`;
-                    });
-                }
-
-                lightboxGallery.style.display = images.length === 1 ? 'block' : 'grid';
-                lightboxIcon.style.display = 'none';
+            if (images.length === 1) {
+                // Single image - make it wide
+                lightboxGallery.style.display = 'block';
+                lightboxGallery.innerHTML = `<img src="${images[0]}" alt="Project Image" style="width: 100%; max-height: 50vh; object-fit: cover; display: block;">`;
             } else {
-                // Discover icon based on category string
-                if (category.toLowerCase().includes('electrical')) {
-                lightboxIcon.innerHTML = '<svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon></svg>';
-                } else if (category.toLowerCase().includes('mechanical')) {
-                lightboxIcon.innerHTML = '<svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"></circle><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"></path></svg>';
-                } else {
-                lightboxIcon.innerHTML = '<svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 14.76V3.5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h4a2 2 0 0 0 2-2"></path><path d="M22 10.33V20a2 2 0 0 1-2 2h-4a2 2 0 0 1-2-2v-9.67"></path><path d="M2 22h20"></path></svg>';
-                }
-                lightboxGallery.style.display = 'none';
-                lightboxIcon.style.display = 'block';
+                // Multiple images - use css grid
+                lightboxGallery.style.display = 'grid';
+                images.forEach(src => {
+                    lightboxGallery.innerHTML += `<img src="${src}" alt="Project Image" style="width: 100%; height: 250px; object-fit: cover; display: block;">`;
+                });
             }
 
-            lightboxTitle.textContent = title;
-            lightboxCategory.textContent = category;
+            lightboxGallery.style.display = images.length === 1 ? 'block' : 'grid';
+            lightboxIcon.style.display = 'none';
+        } else {
+            // Discover icon based on category string
+            if (category.toLowerCase().includes('electrical')) {
+                lightboxIcon.innerHTML = '<svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon></svg>';
+            } else if (category.toLowerCase().includes('mechanical')) {
+                lightboxIcon.innerHTML = '<svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"></circle><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"></path></svg>';
+            } else {
+                lightboxIcon.innerHTML = '<svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 14.76V3.5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h4a2 2 0 0 0 2-2"></path><path d="M22 10.33V20a2 2 0 0 1-2 2h-4a2 2 0 0 1-2-2v-9.67"></path><path d="M2 22h20"></path></svg>';
+            }
+            lightboxGallery.style.display = 'none';
+            lightboxIcon.style.display = 'block';
+        }
 
-            lightbox.classList.add('active');
+        lightboxTitle.textContent = title;
+        lightboxCategory.textContent = category;
+
+        lightbox.classList.add('active');
     });
 
     // ---- Image Popup Modal ----
@@ -429,7 +459,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 link.setAttribute('href', `mailto:${CONFIG.email}`);
             });
         }
-        
+
         // Forcibly remove WhatsApp floating button if it exists
         document.querySelectorAll('.whatsapp-float').forEach(el => el.remove());
     };
