@@ -29,10 +29,10 @@ const translations = {
 
     // ---- ABOUT PREVIEW (HOME) ----
     "home.about.label": { en: "About Our Company", id: "Tentang Perusahaan Kami" },
-    "home.about.title": { en: "PT. Global Indo Simetrika", id: "PT. Global Indo Simetrika" },
+    "home.about.title": { en: "PT. Globalindo Simetrika", id: "PT. Globalindo Simetrika" },
     "home.about.p1": {
-        en: "PT. Global Indo Simetrika is a company engaged in Service and Procurement of Civil, Mechanical, Electrical & Instrumentation works. Supported by professional and experienced human resource and adequate equipment facilities.",
-        id: "PT. Global Indo Simetrika adalah perusahaan yang bergerak di bidang Jasa dan Pengadaan pekerjaan Sipil, Mekanikal, Elektrikal & Instrumentasi. Didukung oleh sumber daya manusia yang profesional dan berpengalaman serta fasilitas peralatan yang memadai."
+        en: "PT. Globalindo Simetrika is a company engaged in Service and Procurement of Civil, Mechanical, Electrical & Instrumentation works. Supported by professional and experienced human resource and adequate equipment facilities.",
+        id: "PT. Globalindo Simetrika adalah perusahaan yang bergerak di bidang Jasa dan Pengadaan pekerjaan Sipil, Mekanikal, Elektrikal & Instrumentasi. Didukung oleh sumber daya manusia yang profesional dan berpengalaman serta fasilitas peralatan yang memadai."
     },
     "home.about.p2": {
         en: "We are committed to providing qualified and timely services to ensure customer satisfaction.",

@@ -5,7 +5,7 @@
 const CONFIG = {
     whatsappNumber: "+6282139168600", // Format: 62 followed by number without + or spaces
     email: "info@globalindosimetrika.co.id",
-    address: "Jl. Cibodas Raya No. 1, Kec. Antapani, Bandung",
+    address: "Jl. Cibodas Raya Ruko No.1, Antapani Tengah, Antapani, Bandung",
     experienceYears: 13
 };
 
