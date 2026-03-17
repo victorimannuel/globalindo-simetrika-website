@@ -2,31 +2,98 @@
 // PT. GLOBALINDO SIMETRIKA - Main JavaScript
 // ============================================
 
-document.addEventListener('DOMContentLoaded', () => {
-    // ---- Navbar scroll effect ----
-    const navbar = document.querySelector('.navbar');
-    const handleScroll = () => {
-        navbar.classList.toggle('scrolled', window.scrollY > 50);
-    };
-    window.addEventListener('scroll', handleScroll);
-    handleScroll();
+// ---- Load Shared Navbar & Footer Partials ----
+async function loadPartials() {
+    const navbarPlaceholder = document.getElementById('navbar-placeholder');
+    const footerPlaceholder = document.getElementById('footer-placeholder');
 
-    // ---- Mobile menu toggle ----
+    const fetches = [];
+
+    if (navbarPlaceholder) {
+        fetches.push(
+            fetch('/parts/navbar.html')
+                .then(r => r.text())
+                .then(html => { navbarPlaceholder.outerHTML = html; })
+        );
+    }
+
+    if (footerPlaceholder) {
+        fetches.push(
+            fetch('/parts/footer.html')
+                .then(r => r.text())
+                .then(html => { footerPlaceholder.outerHTML = html; })
+        );
+    }
+
+    await Promise.all(fetches);
+
+    // Mark active nav link based on current path
+    const path = window.location.pathname;
+    document.querySelectorAll('.nav-link[data-nav-path]').forEach(link => {
+        const navPath = link.getAttribute('data-nav-path');
+        // Root: exact match. Sub-pages: startsWith so /about/ matches /about/anything
+        const isActive = (navPath === '/')
+            ? (path === '/' || path === '/index.html')
+            : path.startsWith(navPath);
+        link.classList.toggle('active', isActive);
+    });
+
+    // Populate footer address from CONFIG
+    const addrEl = document.getElementById('footer-address');
+    if (addrEl && typeof CONFIG !== 'undefined') {
+        addrEl.textContent = CONFIG.address;
+    }
+
+    // Re-apply i18n and re-bind lang toggles after partials are injected
+    if (typeof setLanguage === 'function') {
+        setLanguage(getCurrentLang());
+        // Re-bind lang-toggle buttons now that navbar is in the DOM
+        document.querySelectorAll('.lang-toggle [data-lang]').forEach(btn => {
+            btn.addEventListener('click', () => setLanguage(btn.getAttribute('data-lang')));
+        });
+    }
+
+    // Re-init navbar scroll + mobile toggle
+    initNavbar();
+}
+
+// ---- Navbar scroll effect + mobile toggle ----
+function initNavbar() {
+    const navbar = document.querySelector('.navbar');
+    if (navbar) {
+        const handleScroll = () => {
+            navbar.classList.toggle('scrolled', window.scrollY > 50);
+        };
+        // Remove any previous listener to avoid duplicates
+        window.removeEventListener('scroll', window._gsHandleScroll);
+        window._gsHandleScroll = handleScroll;
+        window.addEventListener('scroll', handleScroll);
+        handleScroll();
+    }
+
     const toggle = document.querySelector('.nav-toggle');
     const menu = document.querySelector('.nav-menu');
     if (toggle && menu) {
-        toggle.addEventListener('click', () => {
-            toggle.classList.toggle('active');
+        // Clone to strip old listeners before re-attaching
+        const newToggle = toggle.cloneNode(true);
+        toggle.parentNode.replaceChild(newToggle, toggle);
+
+        newToggle.addEventListener('click', () => {
+            newToggle.classList.toggle('active');
             menu.classList.toggle('open');
         });
-        // Close menu on link click
         menu.querySelectorAll('.nav-link').forEach(link => {
             link.addEventListener('click', () => {
-                toggle.classList.remove('active');
+                newToggle.classList.remove('active');
                 menu.classList.remove('open');
             });
         });
     }
+}
+
+document.addEventListener('DOMContentLoaded', () => {
+    // Load shared partials first (navbar + footer)
+    loadPartials();
 
     // ---- Scroll animations ----
     const observerOptions = {
