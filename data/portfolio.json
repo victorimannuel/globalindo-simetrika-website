@@ -1,0 +1,282 @@
+{
+  "projects": [
+    {
+      "id": "01",
+      "category": "electrical",
+      "folder": "assessment-and-repair-of-various-automation-cards",
+      "images": ["1.webp","2.webp","3.webp","4.webp","6.webp","7.webp","8.webp","9.webp","10.webp","11.webp"],
+      "title": { "en": "Assessment and Repair of Various Automation Cards", "id": "Asesmen dan Perbaikan Berbagai Kartu Otomasi" }
+    },
+    {
+      "id": "02",
+      "category": "electrical",
+      "folder": "assessment-and-repair-of-distributed-control-system-dcs",
+      "images": ["1.webp","2.webp","3.webp"],
+      "title": { "en": "Assessment and Repair of Distributed Control System (DCS)", "id": "Asesmen dan Perbaikan Distributed Control System (DCS)" }
+    },
+    {
+      "id": "03",
+      "category": "electrical",
+      "folder": "revitalization-of-medium-voltage-panel",
+      "images": ["1.webp","2.webp","3.webp"],
+      "title": { "en": "Revitalization of Panel 6.3 kV STRE", "id": "Revitalisasi Panel 6.3 kV STRE" }
+    },
+    {
+      "id": "04",
+      "category": "electrical",
+      "folder": "retrofit-plc-diverter-damper",
+      "images": ["1.webp","2.webp","3.webp"],
+      "title": { "en": "Retrofit PLC Diverter Damper", "id": "Retrofit PLC Diverter Damper" }
+    },
+    {
+      "id": "05",
+      "category": "electrical",
+      "folder": "assessment-and-repair-of-automation-cards",
+      "images": ["1.webp","2.webp","3.webp"],
+      "title": { "en": "Assessment and Repair Card ABB Procontrol 14", "id": "Asesmen dan Perbaikan Kartu ABB Procontrol 14" }
+    },
+    {
+      "id": "06",
+      "category": "electrical",
+      "folder": "procurement-of-automation-and-industrial-equipment",
+      "images": ["1.webp","2.webp","3.webp","4.webp","5.webp","6.webp","7.webp"],
+      "title": { "en": "Procurement of Automation and Industrial Equipment", "id": "Pengadaan Peralatan Otomasi dan Industri" }
+    },
+    {
+      "id": "07",
+      "category": "electrical",
+      "folder": "assessment-and-repair-of-motor-operated-valves-mov",
+      "images": ["1.webp","2.webp","3.webp"],
+      "title": { "en": "Assessment and Repair MOV Secondary Air", "id": "Asesmen dan Perbaikan MOV Secondary Air" }
+    },
+    {
+      "id": "08",
+      "category": "electrical",
+      "folder": "retrofit-control-system-for-cathodic-protection",
+      "images": ["1.webp","2.webp","3.webp"],
+      "title": { "en": "Retrofit Control System Cathodic Unit 1, 2, and 3", "id": "Retrofit Sistem Kontrol Katodik Unit 1, 2, dan 3" }
+    },
+    {
+      "id": "09",
+      "category": "electrical",
+      "folder": "retrofit-of-sump-pump-control-panel",
+      "images": ["1.webp","2.webp","3.webp"],
+      "title": { "en": "Retrofit Sump Panel Pump Intake", "id": "Retrofit Panel Sump Pump Intake" }
+    },
+    {
+      "id": "10",
+      "category": "electrical",
+      "folder": "assessment-and-repair-motortronics-soft-starter-for-6kv-motor",
+      "images": ["1.webp","2.webp","3.webp"],
+      "title": { "en": "Assessment and Repair Motortronics Soft Starter for 6kV Motor", "id": "Asesmen dan Perbaikan Motortronics Soft Starter untuk Motor 6kV" }
+    },
+    {
+      "id": "11",
+      "category": "electrical",
+      "folder": "modification-control-system-of-maneuver-damper",
+      "images": ["1.webp","2.webp","3.webp"],
+      "title": { "en": "Modification Control System of Maneuver Damper", "id": "Modifikasi Sistem Kontrol Maneuver Damper" }
+    },
+    {
+      "id": "12",
+      "category": "electrical",
+      "folder": "upgrade-of-excitation-breaker-system",
+      "images": ["1.webp","2.webp","3.webp"],
+      "title": { "en": "Upgrade Excitation Breaker Major Inspection GT 3.2", "id": "Upgrade Excitation Breaker Major Inspection GT 3.2" }
+    },
+    {
+      "id": "13",
+      "category": "electrical",
+      "folder": "upgrade-system-control-and-vsd-grabber-ship-unloader",
+      "images": ["1.webp","2.webp","3.webp"],
+      "title": { "en": "Upgrade System Control and VSD Grabber Ship Unloader", "id": "Upgrade Sistem Kontrol dan VSD Grabber Ship Unloader" }
+    },
+    {
+      "id": "14",
+      "category": "electrical",
+      "folder": "industrial-compressor-maintenance",
+      "images": ["1.webp","2.webp","3.webp"],
+      "title": { "en": "Gardner Denver Compressor Maintenance", "id": "Pemeliharaan Kompresor Gardner Denver" }
+    },
+    {
+      "id": "15",
+      "category": "electrical",
+      "folder": "routine-maintenance-services-for-industrial-rolling-doors",
+      "images": ["1.webp","2.webp","3.webp"],
+      "title": { "en": "Routine Maintenance Services for Rolling Door Block 1-4", "id": "Pemeliharaan Rutin Rolling Door Blok 1-4" }
+    },
+    {
+      "id": "16",
+      "category": "electrical",
+      "folder": "revitalization-and-repair-of-overhead-cranes",
+      "images": ["1.webp","2.webp","3.webp"],
+      "title": { "en": "Revitalization and Repair of Overhead Cranes", "id": "Revitalisasi dan Perbaikan Overhead Crane" }
+    },
+    {
+      "id": "17",
+      "category": "electrical",
+      "folder": "installation-of-precision-air-handling-unit",
+      "images": ["1.webp","2.webp","3.webp"],
+      "title": { "en": "Installation of Precision Air Handling Unit", "id": "Instalasi Precision Air Handling Unit" }
+    },
+    {
+      "id": "18",
+      "category": "electrical",
+      "folder": "assessment-and-repair-of-infrared-curtains",
+      "images": ["1.webp","2.webp","3.webp"],
+      "title": { "en": "Assessment and Repair Infrared Curtains", "id": "Asesmen dan Perbaikan Infrared Curtains" }
+    },
+    {
+      "id": "19",
+      "category": "electrical",
+      "folder": "revitalization-of-medium-voltage-panel",
+      "images": ["1.webp","2.webp","3.webp"],
+      "title": { "en": "STRE 6.3 kV Cable Replacement", "id": "Penggantian Kabel STRE 6.3 kV" }
+    },
+    {
+      "id": "20",
+      "category": "electrical",
+      "folder": "ship-unloader-assessment-and-vsd-repair",
+      "images": ["1.jpeg","2.jpeg","3.jpeg"],
+      "title": { "en": "Ship Unloader Assessment and VSD Repair", "id": "Asesmen Ship Unloader dan Perbaikan VSD" }
+    },
+    {
+      "id": "21",
+      "category": "electrical",
+      "folder": "upgrade-of-air-handling-unit-system",
+      "images": ["1.webp","2.webp","3.webp"],
+      "title": { "en": "Upgrade Air Handling Unit System", "id": "Upgrade Sistem Air Handling Unit" }
+    },
+    {
+      "id": "22a",
+      "category": "mechanical",
+      "folder": "erection-and-installation-lift-central-control-room-ccr",
+      "images": ["1.jpeg","2.jpeg","3.jpeg"],
+      "title": { "en": "Erection and Installation Lift Central Control Room (CCR)", "id": "Ereksi dan Instalasi Lift Central Control Room (CCR)" }
+    },
+    {
+      "id": "22b",
+      "category": "mechanical",
+      "folder": "unit-replacement-of-the-2000-kg-boiler-elevator",
+      "images": ["1.jpeg","2.jpeg","3.jpeg"],
+      "title": { "en": "Unit Replacement of The 2000 KG Boiler Elevator", "id": "Penggantian Unit Elevator Boiler 2000 KG" }
+    },
+    {
+      "id": "22c",
+      "category": "mechanical",
+      "folder": "upgrade-control-room-for-overhead-cranes",
+      "images": ["1.webp","2.webp","3.webp"],
+      "title": { "en": "Upgrade Control Room Overhead Cranes", "id": "Upgrade Control Room Overhead Cranes" }
+    },
+    {
+      "id": "23",
+      "category": "mechanical",
+      "folder": "upgrade-of-construction-lifting-tools",
+      "images": ["1.webp","2.webp","3.webp"],
+      "title": { "en": "Upgrade of Construction Lifting Tools HRSG", "id": "Upgrade Alat Angkat Konstruksi HRSG" }
+    },
+    {
+      "id": "24a",
+      "category": "mechanical",
+      "folder": "major-overhaul-of-industrial-compressors",
+      "images": ["1.webp","2.webp","3.webp"],
+      "title": { "en": "Overhaul Compressor", "id": "Overhaul Kompresor" }
+    },
+    {
+      "id": "24b",
+      "category": "civil",
+      "folder": "administration-building-facade-design-services",
+      "images": ["1.webp","2.webp","3.webp"],
+      "title": { "en": "Administration Building Facade Design Services", "id": "Layanan Desain Fasad Gedung Administrasi" }
+    },
+    {
+      "id": "25",
+      "category": "civil",
+      "folder": "mosque-construction-and-revitalization",
+      "images": ["1.webp","2.webp","3.webp","4.webp","5.webp"],
+      "title": { "en": "Mosque Construction and Revitalization", "id": "Konstruksi dan Revitalisasi Masjid" }
+    },
+    {
+      "id": "26",
+      "category": "civil",
+      "folder": "canopy-installation-amp-landscaping-services",
+      "images": ["1.webp","2.webp","3.webp","4.webp","5.webp","6.webp"],
+      "title": { "en": "Canopy Installation & Landscaping Services", "id": "Instalasi Kanopi & Layanan Lansekap" }
+    },
+    {
+      "id": "27",
+      "category": "civil",
+      "folder": "official-residence-construction",
+      "images": ["1.webp","2.webp","3.webp","4.webp","5.webp"],
+      "title": { "en": "Official Residence Construction", "id": "Konstruksi Rumah Dinas" }
+    }
+  ],
+  "timeline": [
+    {
+      "year": "2012",
+      "items": [
+        { "title": "GCP Panel Modification Black Start System", "client": "Vale", "location": "Sidoarjo" }
+      ]
+    },
+    {
+      "year": "2013",
+      "items": [
+        { "title": "Panel Installation for Instrumentation Control Safeguard", "client": "Pertamina", "location": "Cilacap" },
+        { "title": "Panel Rectification", "client": "Transgasindo", "location": "Jambi" },
+        { "title": "Troubleshooting Speed Detecting System", "client": "Pama", "location": "Balikpapan" }
+      ]
+    },
+    {
+      "year": "2014",
+      "items": [
+        { "title": "Troubleshooting Hardwire SCADA Monitoring Panel", "client": "MSM", "location": "Toka Tindung" },
+        { "title": "Water Treatment Panel Installation", "client": "PDAM Cibinong", "location": "Bogor" },
+        { "title": "PLC & HMI Programming", "client": "Holiday Inn", "location": "Bali" },
+        { "title": "Installation SCADA Panel Monitoring", "client": "Pertamina", "location": "EP Tanjung" }
+      ]
+    },
+    {
+      "year": "2015",
+      "items": [
+        { "title": "Installation Control Panel", "client": "NIPSEA", "location": "Purwakarta" },
+        { "title": "Schematic Wiring Diagram Drawing & Installation for PLTD SCADA System", "client": "Sewatama", "location": "Wasior" },
+        { "title": "Installation N2 Plan Panel", "client": "Pertamina", "location": "Cilacap" }
+      ]
+    },
+    {
+      "year": "2016",
+      "items": [
+        { "title": "Troubleshooting SCADA Panel HVAC", "client": "Sanbe Farma", "location": "Bandung" }
+      ]
+    },
+    {
+      "year": "2017",
+      "items": [
+        { "title": "Installation SCADA Panel", "client": "Sewatama", "location": "Nusa Penida" }
+      ]
+    },
+    {
+      "year": "2020 – 2021",
+      "items": [
+        { "title": "Schematic Wiring Diagram & PLC Programming for Input Pump Process", "client": "MSM", "location": "Toka Tindung" },
+        { "title": "Solar Panel System Designing — Schematic Wiring Diagram Drawing", "client": "Pertamina", "location": "Jawa Tengah, Jabodetabek, Bali" },
+        { "title": "Configuration SCADA Gas Engine", "client": "Pertamina", "location": "Area Kilang Minyak RO Dumai" },
+        { "title": "PLC Control Pump System", "client": "PT. Amman Mineral", "location": "Nusa Tenggara" },
+        { "title": "SCADA Conveyor System", "client": "PT. Tunas Inti Abadi", "location": "Kalimantan Selatan" },
+        { "title": "Modification SCADA Panel South & North", "client": "Chevron", "location": "Riau" },
+        { "title": "Installation Inet SCADA Panel", "client": "SOFiTEL", "location": "Bali" },
+        { "title": "Installation Data Concentrator Panel", "client": "MSM", "location": "Toka Tindung" }
+      ]
+    },
+    {
+      "year": "2023 – 2024",
+      "items": [
+        {
+          "title": "Ongoing Projects & Partnerships",
+          "client": "PT. PLN, PT. PLN Nusantara Power, PT. PLN Indonesia Power, PT. Sinarmas Group, PT. Gajah Tunggal Tbk., PT. Pertamina (Persero)",
+          "location": ""
+        }
+      ]
+    }
+  ]
+}

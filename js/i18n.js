@@ -280,6 +280,11 @@ function setLanguage(lang) {
             idBtn.classList.toggle('active', lang === 'id');
         }
     });
+
+    // Hook for dynamically rendered content (e.g. portfolio cards)
+    if (typeof window.updatePortfolioLang === 'function') {
+        window.updatePortfolioLang();
+    }
 }
 
 function getCurrentLang() {

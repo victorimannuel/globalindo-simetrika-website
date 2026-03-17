@@ -114,6 +114,12 @@ document.addEventListener('DOMContentLoaded', () => {
         observer.observe(el);
     });
 
+    window.reinitObserver = () => {
+        document.querySelectorAll('.fade-in:not(.visible), .fade-in-left:not(.visible), .fade-in-right:not(.visible)').forEach(el => {
+            observer.observe(el);
+        });
+    };
+
     // ---- Counter animation ----
     const counters = document.querySelectorAll('[data-count]');
     const counterObserver = new IntersectionObserver((entries) => {
@@ -141,7 +147,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // ---- Portfolio filter ----
     const filterBtns = document.querySelectorAll('.filter-btn');
-    const portfolioCards = document.querySelectorAll('.portfolio-card');
 
     filterBtns.forEach(btn => {
         btn.addEventListener('click', () => {
@@ -149,7 +154,8 @@ document.addEventListener('DOMContentLoaded', () => {
             btn.classList.add('active');
             const filter = btn.getAttribute('data-filter');
 
-            portfolioCards.forEach(card => {
+            // Query dynamically since cards may be injected asynchronously
+            document.querySelectorAll('.portfolio-card').forEach(card => {
                 if (filter === 'all' || card.getAttribute('data-category') === filter) {
                     card.style.display = '';
                     setTimeout(() => {
@@ -297,8 +303,10 @@ document.addEventListener('DOMContentLoaded', () => {
     const lightboxIcon = lightbox.querySelector('.lightbox-icon');
     const lightboxGallery = lightbox.querySelector('.lightbox-gallery');
 
-    document.querySelectorAll('.portfolio-card').forEach(card => {
-        card.addEventListener('click', () => {
+    document.addEventListener('click', (e) => {
+        const card = e.target.closest('.portfolio-card');
+        if (!card) return;
+
             const title = card.querySelector('h4').textContent;
             const category = card.querySelector('.card-category').textContent;
 
@@ -328,11 +336,11 @@ document.addEventListener('DOMContentLoaded', () => {
             } else {
                 // Discover icon based on category string
                 if (category.toLowerCase().includes('electrical')) {
-                    lightboxIcon.textContent = '<svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon></svg>';
+                lightboxIcon.innerHTML = '<svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon></svg>';
                 } else if (category.toLowerCase().includes('mechanical')) {
-                    lightboxIcon.textContent = '<svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"></circle><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"></path></svg>';
+                lightboxIcon.innerHTML = '<svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"></circle><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"></path></svg>';
                 } else {
-                    lightboxIcon.textContent = '<svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 14.76V3.5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h4a2 2 0 0 0 2-2"></path><path d="M22 10.33V20a2 2 0 0 1-2 2h-4a2 2 0 0 1-2-2v-9.67"></path><path d="M2 22h20"></path></svg>';
+                lightboxIcon.innerHTML = '<svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 14.76V3.5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h4a2 2 0 0 0 2-2"></path><path d="M22 10.33V20a2 2 0 0 1-2 2h-4a2 2 0 0 1-2-2v-9.67"></path><path d="M2 22h20"></path></svg>';
                 }
                 lightboxGallery.style.display = 'none';
                 lightboxIcon.style.display = 'block';
@@ -342,7 +350,6 @@ document.addEventListener('DOMContentLoaded', () => {
             lightboxCategory.textContent = category;
 
             lightbox.classList.add('active');
-        });
     });
 
     // ---- Image Popup Modal ----
