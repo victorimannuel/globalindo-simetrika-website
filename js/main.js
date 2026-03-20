@@ -63,26 +63,35 @@ function injectStructuredData() {
     script.type = 'application/ld+json';
     script.text = JSON.stringify({
         "@context": "https://schema.org",
-        "@type": "Organization",
-        "name": "PT. Globalindo Simetrika",
-        "url": "https://globalindosimetrika.co.id/",
-        "logo": "https://globalindosimetrika.co.id/images/logo.webp",
-        "contactPoint": {
-            "@type": "ContactPoint",
-            "telephone": "+62-812-3456-7890",
-            "contactType": "customer service",
-            "areaServed": "ID",
-            "availableLanguage": ["Indonesian", "English"]
-        },
-        "address": {
-            "@type": "PostalAddress",
-            "streetAddress": "Jl. Cibodas Raya Ruko No.1, Antapani Tengah, Antapani, Bandung",
-            "addressLocality": "Bandung",
-            "addressRegion": "Jawa Barat",
-            "postalCode": "40291",
-            "addressCountry": "ID"
-        },
-        "sameAs": []
+        "@graph": [
+            {
+                "@type": "WebSite",
+                "name": "PT. Globalindo Simetrika",
+                "url": "https://globalindosimetrika.co.id/"
+            },
+            {
+                "@type": "Organization",
+                "name": "PT. Globalindo Simetrika",
+                "url": "https://globalindosimetrika.co.id/",
+                "logo": "https://globalindosimetrika.co.id/images/logo.webp",
+                "contactPoint": {
+                    "@type": "ContactPoint",
+                    "telephone": "+62-812-3456-7890",
+                    "contactType": "customer service",
+                    "areaServed": "ID",
+                    "availableLanguage": ["Indonesian", "English"]
+                },
+                "address": {
+                    "@type": "PostalAddress",
+                    "streetAddress": "Jl. Cibodas Raya Ruko No.1, Antapani Tengah, Antapani, Bandung",
+                    "addressLocality": "Bandung",
+                    "addressRegion": "Jawa Barat",
+                    "postalCode": "40291",
+                    "addressCountry": "ID"
+                },
+                "sameAs": []
+            }
+        ]
     });
     document.head.appendChild(script);
 }
