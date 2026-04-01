@@ -3,6 +3,25 @@
 // ============================================
 
 const translations = {
+    // ---- SEO METADATA ----
+    "meta.title.home": { en: "PT. Globalindo Simetrika | Industrial Supply & Repair Solution", id: "PT. Globalindo Simetrika | Solusi Penyediaan & Perbaikan Industri" },
+    "meta.desc.home": { en: "Your Preferred Partner in Industrial Supply and Repair Solution. Specializing in Electrical, Mechanical, Civil, and Procurement.", id: "Mitra Terpercaya Anda dalam Solusi Penyediaan dan Perbaikan Industri. Spesialis dalam Elektrikal, Mekanikal, Sipil, dan Pengadaan." },
+    
+    "meta.title.about": { en: "About Us | PT. Globalindo Simetrika", id: "Tentang Kami | PT. Globalindo Simetrika" },
+    "meta.desc.about": { en: "Learn more about PT. Globalindo Simetrika - Our Vision, Mission, Legalities, and Quality Certifications.", id: "Pelajari lebih lanjut tentang PT. Globalindo Simetrika - Visi, Misi, Legalitas, dan Sertifikasi Mutu kami." },
+    
+    "meta.title.services": { en: "Our Services | PT. Globalindo Simetrika", id: "Layanan Kami | PT. Globalindo Simetrika" },
+    "meta.desc.services": { en: "Comprehensive industrial solutions across Electrical, Mechanical, Civil, and Procurement.", id: "Solusi industri komprehensif di bidang Elektrikal, Mekanikal, Sipil, dan Pengadaan." },
+    
+    "meta.title.portfolio": { en: "Portfolio | PT. Globalindo Simetrika", id: "Portofolio | PT. Globalindo Simetrika" },
+    "meta.desc.portfolio": { en: "A showcase of our completed industrial projects across various industries in Indonesia.", id: "Showcase proyek industri kami yang telah selesai di berbagai industri di Indonesia." },
+    
+    "meta.title.team": { en: "Our Team | PT. Globalindo Simetrika", id: "Tim Kami | PT. Globalindo Simetrika" },
+    "meta.desc.team": { en: "Meet the experienced professionals driving PT. Globalindo Simetrika forward.", id: "Kenali para profesional berpengalaman yang mendorong PT. Globalindo Simetrika maju." },
+    
+    "meta.title.contact": { en: "Contact Us | PT. Globalindo Simetrika", id: "Hubungi Kami | PT. Globalindo Simetrika" },
+    "meta.desc.contact": { en: "Get in touch with our head office or branch offices for industrial support and services.", id: "Hubungi kantor pusat atau kantor cabang kami untuk dukungan dan layanan industri." },
+
     // ---- NAVBAR ----
     "nav.home": { en: "Home", id: "Beranda" },
     "nav.about": { en: "About", id: "Tentang" },

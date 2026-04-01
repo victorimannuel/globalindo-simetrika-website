@@ -1,0 +1,25 @@
+{
+  "name": "globalindo-simetrika",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "build": "node build.mjs",
+    "dev": "python3 -m http.server 3333 --directory dist"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/victorimannuel/globalindo-simetrika-website.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/victorimannuel/globalindo-simetrika-website/issues"
+  },
+  "homepage": "https://github.com/victorimannuel/globalindo-simetrika-website#readme",
+  "dependencies": {
+    "cheerio": "^1.2.0"
+  }
+}
