@@ -276,7 +276,7 @@ h6 {
   position: relative;
 }
 
-.lang-toggle a {
+.lang-toggle button {
   padding: 6px 12px;
   font-family: var(--font-primary);
   font-size: 0.75rem;
@@ -292,12 +292,12 @@ h6 {
   z-index: 1;
 }
 
-.lang-toggle a.active {
+.lang-toggle button.active {
   background: var(--blue-dark);
   color: var(--white);
 }
 
-.lang-toggle a:not(.active):hover {
+.lang-toggle button:not(.active):hover {
   color: var(--blue-dark);
   background: rgba(14, 39, 71, 0.05);
 }
@@ -309,19 +309,19 @@ h6 {
   border-color: rgba(255, 255, 255, 0.2);
 }
 
-.hero-page .navbar:not(.scrolled) .lang-toggle a,
-.navbar:not(.scrolled) .lang-toggle a {
+.hero-page .navbar:not(.scrolled) .lang-toggle button,
+.navbar:not(.scrolled) .lang-toggle button {
   color: rgba(255, 255, 255, 0.6);
 }
 
-.hero-page .navbar:not(.scrolled) .lang-toggle a.active,
-.navbar:not(.scrolled) .lang-toggle a.active {
+.hero-page .navbar:not(.scrolled) .lang-toggle button.active,
+.navbar:not(.scrolled) .lang-toggle button.active {
   background: var(--white);
   color: var(--blue-dark);
 }
 
-.hero-page .navbar:not(.scrolled) .lang-toggle a:not(.active):hover,
-.navbar:not(.scrolled) .lang-toggle a:not(.active):hover {
+.hero-page .navbar:not(.scrolled) .lang-toggle button:not(.active):hover,
+.navbar:not(.scrolled) .lang-toggle button:not(.active):hover {
   color: var(--white);
   background: rgba(255, 255, 255, 0.1);
 }
