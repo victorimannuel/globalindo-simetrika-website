@@ -187,7 +187,32 @@ const processHtmlFile = (srcPath) => {
         });
 
         // --------------------------------------------------
-        // 12. Write output file
+        // 12. Rewrite relative asset paths → absolute root-relative
+        //     css/x → /css/x  |  js/x → /js/x  |  images/x → /images/x
+        //     Needed because pages live at /en/ or /id/ subdirectories.
+        // --------------------------------------------------
+        const ASSET_DIRS = ['css/', 'js/', 'images/', 'data/', 'fonts/'];
+        const makeAbsolute = (val) => {
+            if (!val) return val;
+            if (val.startsWith('http') || val.startsWith('/') || val.startsWith('#')) return val;
+            if (ASSET_DIRS.some(d => val.startsWith(d))) return '/' + val;
+            return val;
+        };
+        // Stylesheets & preload links
+        $('link[href]').each((_, el) => {
+            $(el).attr('href', makeAbsolute($(el).attr('href')));
+        });
+        // Scripts
+        $('script[src]').each((_, el) => {
+            $(el).attr('src', makeAbsolute($(el).attr('src')));
+        });
+        // Images
+        $('img[src]').each((_, el) => {
+            $(el).attr('src', makeAbsolute($(el).attr('src')));
+        });
+
+        // --------------------------------------------------
+        // 13. Write output file
         // --------------------------------------------------
         const destPath = path.join(DIST_DIR, lang, relPath);
         mkdirp(path.dirname(destPath));
