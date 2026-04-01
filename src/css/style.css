@@ -504,29 +504,32 @@ h6 {
 }
 
 .hero-scroll-cue {
-  margin-top: 28px;
+  margin-top: 40px;
   display: inline-flex;
   align-items: center;
   gap: 10px;
   font-family: var(--font-primary);
   text-transform: uppercase;
   letter-spacing: 0.16em;
-  font-size: 0.66rem;
+  font-size: 0.75rem;
   font-weight: 700;
-  color: rgba(255, 255, 255, 0.72);
+  color: rgba(255, 255, 255, 0.95);
   text-decoration: none;
+  transition: all 0.3s ease;
 }
 
 .hero-scroll-cue:hover {
   color: var(--white);
+  transform: scale(1.05);
 }
 
 .hero-scroll-arrow {
-  width: 22px;
-  height: 22px;
+  width: 26px;
+  height: 26px;
   border-radius: 999px;
-  border: 1px solid rgba(255, 255, 255, 0.38);
+  border: 1.5px solid rgba(255, 255, 255, 0.7);
   position: relative;
+  transition: all 0.3s ease;
 }
 
 .hero-scroll-arrow::before {
@@ -534,10 +537,10 @@ h6 {
   position: absolute;
   left: 50%;
   top: 45%;
-  width: 7px;
-  height: 7px;
-  border-right: 2px solid currentColor;
-  border-bottom: 2px solid currentColor;
+  width: 8px;
+  height: 8px;
+  border-right: 2.5px solid currentColor;
+  border-bottom: 2.5px solid currentColor;
   transform: translate(-50%, -50%) rotate(45deg);
 }
 
@@ -2294,7 +2297,7 @@ h6 {
   }
 
   .hero-scroll-cue {
-    margin-top: 20px;
+    margin-top: 30px;
     justify-content: center;
   }
 
@@ -2344,8 +2347,9 @@ h6 {
   }
 
   .hero-scroll-cue {
-    font-size: 0.62rem;
+    font-size: 0.70rem;
     letter-spacing: 0.12em;
+    margin-top: 28px;
   }
 }
 
