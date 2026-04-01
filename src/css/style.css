@@ -316,9 +316,9 @@ h6 {
 }
 
 .lang-toggle a.active {
-  background: var(--white);
-  color: var(--blue-dark);
-  box-shadow: 0 6px 14px rgba(14, 39, 71, 0.16);
+  background: var(--blue-light);
+  color: var(--white);
+  box-shadow: var(--shadow-blue);
 }
 
 .lang-toggle a:not(.active):hover {
@@ -348,9 +348,9 @@ h6 {
 
 .hero-page .navbar:not(.scrolled) .lang-toggle a.active,
 .navbar:not(.scrolled) .lang-toggle a.active {
-  background: var(--white);
-  color: var(--blue-dark);
-  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.3);
+  background: var(--blue-light);
+  color: var(--white);
+  box-shadow: 0 10px 22px rgba(0, 153, 226, 0.35);
 }
 
 .hero-page .navbar:not(.scrolled) .lang-toggle a:not(.active):hover,
@@ -2202,8 +2202,8 @@ h6 {
   }
 
   .lang-toggle a.active {
-    background: var(--white) !important;
-    color: var(--blue-dark) !important;
+    background: var(--blue-light) !important;
+    color: var(--white) !important;
   }
 
   /* Layout Adjustments */
