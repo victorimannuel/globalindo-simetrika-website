@@ -5,8 +5,8 @@ document.addEventListener('DOMContentLoaded', async () => {
     
     if (container && cardTemplate && itemTemplate) {
         try {
-            // Determine path difference since it may be requested from root (/) or services (/services/) directory
-            const basePath = window.location.pathname.includes('/services/') ? '../data/services.json' : './data/services.json';
+            // Using absolute root path so it works regardless of sub-directory depth
+            const basePath = '/data/services.json';
 
             const res = await fetch(basePath);
             const servicesData = await res.json();
