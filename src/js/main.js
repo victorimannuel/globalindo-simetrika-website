@@ -216,72 +216,7 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
-    // ---- Custom Modern Cursor ----
-    // ---- Custom Modern Cursor ----
-    // Remove strict touch check because touch-capable Windows laptops evaluate to true but still use mice
-    const initCursor = () => {
-        const cursorDot = document.createElement('div');
-        cursorDot.classList.add('custom-cursor-dot');
-        document.body.appendChild(cursorDot);
 
-        const cursorOutline = document.createElement('div');
-        cursorOutline.classList.add('custom-cursor-outline');
-        document.body.appendChild(cursorOutline);
-
-        // Add a safety class so CSS only hides the real mouse if JS ran successfully
-        document.body.classList.add('has-custom-cursor');
-
-        let mouseX = window.innerWidth / 2;
-        let mouseY = window.innerHeight / 2;
-        let outlineX = window.innerWidth / 2;
-        let outlineY = window.innerHeight / 2;
-        let isMoving = false;
-
-        window.addEventListener('mousemove', (e) => {
-            mouseX = e.clientX;
-            mouseY = e.clientY;
-
-            cursorDot.style.transform = `translate(${mouseX}px, ${mouseY}px) translate(-50%, -50%)`;
-
-            // If the user uses a mouse, ensure cursor is visible
-            if (!isMoving) {
-                cursorDot.style.opacity = 1;
-                cursorOutline.style.opacity = 1;
-                isMoving = true;
-            }
-        });
-
-        const animateCursor = () => {
-            let distX = mouseX - outlineX;
-            let distY = mouseY - outlineY;
-
-            outlineX += distX * 0.15; // smoothness factor
-            outlineY += distY * 0.15;
-
-            cursorOutline.style.transform = `translate(${outlineX}px, ${outlineY}px) translate(-50%, -50%)`;
-
-            requestAnimationFrame(animateCursor);
-        };
-        animateCursor();
-
-        const trackHover = () => {
-            const interactiveElements = document.querySelectorAll('a, button, .team-card, .service-card, .client-card, .portfolio-card');
-            interactiveElements.forEach(el => {
-                if (!el.dataset.cursorTracked) {
-                    el.addEventListener('mouseenter', () => document.body.classList.add('custom-cursor-hover'));
-                    el.addEventListener('mouseleave', () => document.body.classList.remove('custom-cursor-hover'));
-                    el.dataset.cursorTracked = true;
-                }
-            });
-        };
-        trackHover();
-
-        // Automatically track newly filtered elements if applicable
-        setInterval(trackHover, 1500);
-    };
-
-    // Delay init slightly to ensure body is ready
-    setTimeout(initCursor, 50);
 
     // ---- Portfolio Lightbox Modal ----
     // ---- Portfolio Lightbox Modal ----
@@ -431,19 +366,7 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
 
-    // Custom Cursor Interactions (update trackHover to include popups)
-    const updateCursorTracking = () => {
-        const interactiveElements = document.querySelectorAll('a, button, .team-card, .service-card, .client-card, .portfolio-card, .image-popup-trigger');
-        interactiveElements.forEach(el => {
-            if (!el.dataset.cursorTracked) {
-                el.addEventListener('mouseenter', () => document.body.classList.add('custom-cursor-hover'));
-                el.addEventListener('mouseleave', () => document.body.classList.remove('custom-cursor-hover'));
-                el.dataset.cursorTracked = true;
-            }
-        });
-    };
-    updateCursorTracking();
-    setInterval(updateCursorTracking, 2000);
+
 
     // ---- Single Source of Truth for Dynamic Data ----
     const syncConfig = () => {

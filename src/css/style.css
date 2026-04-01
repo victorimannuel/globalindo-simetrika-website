@@ -276,7 +276,7 @@ h6 {
   position: relative;
 }
 
-.lang-toggle button {
+.lang-toggle a {
   padding: 6px 12px;
   font-family: var(--font-primary);
   font-size: 0.75rem;
@@ -292,12 +292,12 @@ h6 {
   z-index: 1;
 }
 
-.lang-toggle button.active {
+.lang-toggle a.active {
   background: var(--blue-dark);
   color: var(--white);
 }
 
-.lang-toggle button:not(.active):hover {
+.lang-toggle a:not(.active):hover {
   color: var(--blue-dark);
   background: rgba(14, 39, 71, 0.05);
 }
@@ -309,19 +309,19 @@ h6 {
   border-color: rgba(255, 255, 255, 0.2);
 }
 
-.hero-page .navbar:not(.scrolled) .lang-toggle button,
-.navbar:not(.scrolled) .lang-toggle button {
+.hero-page .navbar:not(.scrolled) .lang-toggle a,
+.navbar:not(.scrolled) .lang-toggle a {
   color: rgba(255, 255, 255, 0.6);
 }
 
-.hero-page .navbar:not(.scrolled) .lang-toggle button.active,
-.navbar:not(.scrolled) .lang-toggle button.active {
+.hero-page .navbar:not(.scrolled) .lang-toggle a.active,
+.navbar:not(.scrolled) .lang-toggle a.active {
   background: var(--white);
   color: var(--blue-dark);
 }
 
-.hero-page .navbar:not(.scrolled) .lang-toggle button:not(.active):hover,
-.navbar:not(.scrolled) .lang-toggle button:not(.active):hover {
+.hero-page .navbar:not(.scrolled) .lang-toggle a:not(.active):hover,
+.navbar:not(.scrolled) .lang-toggle a:not(.active):hover {
   color: var(--white);
   background: rgba(255, 255, 255, 0.1);
 }
@@ -2237,74 +2237,7 @@ h6 {
   }
 }
 
-/* ============================================
-   CUSTOM CURSOR
-   ============================================ */
-@media (pointer: fine) {
-  body.has-custom-cursor {
-    cursor: none;
-    /* Hide default cursor only if custom cursor JS injected it */
-  }
 
-  .custom-cursor-dot {
-    width: 6px;
-    height: 6px;
-    background-color: var(--blue-light);
-    border-radius: 50%;
-    position: fixed;
-    top: 0;
-    left: 0;
-    pointer-events: none;
-    z-index: 999999;
-    transition: width 0.2s, height 0.2s, background-color 0.2s;
-  }
-
-  .custom-cursor-outline {
-    width: 36px;
-    height: 36px;
-    border: 2px solid var(--blue-light);
-    border-radius: 50%;
-    position: fixed;
-    top: 0;
-    left: 0;
-    pointer-events: none;
-    z-index: 999998;
-    transition: width 0.2s, height 0.2s, background-color 0.2s, border-color 0.2s;
-  }
-
-  body.custom-cursor-hover .custom-cursor-outline {
-    width: 56px;
-    height: 56px;
-    background-color: rgba(0, 153, 226, 0.1);
-    border-color: transparent;
-  }
-
-  body.custom-cursor-hover .custom-cursor-dot {
-    width: 0;
-    height: 0;
-  }
-
-  /* Make sure standard elements still look clickable, but we hide normal cursors */
-  body.has-custom-cursor a,
-  body.has-custom-cursor button,
-  body.has-custom-cursor input,
-  body.has-custom-cursor textarea,
-  body.has-custom-cursor select,
-  body.has-custom-cursor .team-card,
-  body.has-custom-cursor .service-card,
-  body.has-custom-cursor .client-card,
-  body.has-custom-cursor .portfolio-card {
-    cursor: none;
-  }
-}
-
-@media (pointer: coarse) {
-
-  .custom-cursor-dot,
-  .custom-cursor-outline {
-    display: none !important;
-  }
-}
 
 /* ============================================
    WHATSAPP FLOATING BUTTON
