@@ -11,6 +11,8 @@ const springSnap = { type: "spring", stiffness: 500, damping: 30 };
 
 // ---- HERO ENTRANCE ----
 export function initHeroAnimations() {
+    const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
     // 1. Reveal Navbar (Drop from top)
     animate(".navbar", { y: [-80, 0], opacity: [0, 1] }, { duration: 0.6, easing: "ease-out" });
 
@@ -45,8 +47,22 @@ export function initHeroAnimations() {
         { delay: stagger(0.1, { start: 0.8 }), duration: 0.7, easing: springSmooth }
     );
 
+    // Scroll cue appears after primary hero content.
+    animate(".hero-scroll-cue",
+        { opacity: [0, 1], y: [10, 0] },
+        { delay: 1.1, duration: 0.5, easing: "ease-out" }
+    );
+
+    if (!reduceMotion) {
+        animate(".hero-scroll-arrow",
+            { y: [0, 4, 0] },
+            { duration: 1.6, repeat: Infinity, easing: "ease-in-out" }
+        );
+    }
+
     // 3. Floating Shapes Background
-    document.querySelectorAll('.hero-shape').forEach((shape, i) => {
+    if (!reduceMotion) {
+        document.querySelectorAll('.hero-shape').forEach((shape, i) => {
         animate(shape,
             {
                 y: [0, -50, 0],
@@ -60,7 +76,8 @@ export function initHeroAnimations() {
                 easing: "linear"
             }
         );
-    });
+        });
+    }
 }
 
 // ---- SCROLL REVEAL ----
