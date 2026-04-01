@@ -195,7 +195,15 @@ const processHtmlFile = (srcPath) => {
         const makeAbsolute = (val) => {
             if (!val) return val;
             if (val.startsWith('http') || val.startsWith('/') || val.startsWith('#')) return val;
-            if (ASSET_DIRS.some(d => val.startsWith(d))) return '/' + val;
+            
+            // If the value contains any of our asset directories (like css/ or js/),
+            // extract everything from that point onwards and make it root-relative.
+            for (const d of ASSET_DIRS) {
+                const idx = val.indexOf(d);
+                if (idx !== -1) {
+                    return '/' + val.substring(idx);
+                }
+            }
             return val;
         };
         // Stylesheets & preload links
