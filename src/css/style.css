@@ -412,13 +412,13 @@ h6 {
   display: inline-flex;
   align-items: center;
   gap: 8px;
-  padding: 8px 20px;
-  background: rgba(255, 255, 255, 0.08);
-  border: 1px solid rgba(0, 153, 226, 0.3);
+  padding: 9px 20px;
+  background: rgba(0, 153, 226, 0.14);
+  border: 1px solid rgba(0, 153, 226, 0.42);
   border-radius: 4px;
   font-size: 0.85rem;
-  font-weight: 500;
-  color: var(--blue-soft);
+  font-weight: 600;
+  color: #eef9ff;
   margin-bottom: 28px;
   backdrop-filter: blur(10px);
 }
