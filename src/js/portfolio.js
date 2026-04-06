@@ -101,6 +101,13 @@ window.updatePortfolioLang = updatePortfolioLang;
 
 // Main init
 async function initPortfolio() {
+    const grid = document.getElementById('portfolio-grid');
+    const timeline = document.getElementById('portfolio-timeline');
+
+    if (grid && timeline && grid.children.length > 0 && timeline.children.length > 0) {
+        return;
+    }
+
     try {
         const res = await fetch('/data/portfolio.json');
         const data = await res.json();

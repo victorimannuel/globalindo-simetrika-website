@@ -2,6 +2,10 @@ document.addEventListener('DOMContentLoaded', async () => {
     const container = document.getElementById('dynamic-services-container');
     const cardTemplate = document.getElementById('service-card-template');
     const itemTemplate = document.getElementById('service-item-template');
+
+    if (container && container.children.length > 0) {
+        return;
+    }
     
     if (container && cardTemplate && itemTemplate) {
         try {

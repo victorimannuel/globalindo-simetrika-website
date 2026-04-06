@@ -1074,6 +1074,12 @@ h6 {
   font-weight: 700;
 }
 
+.service-card p {
+  color: var(--text-muted);
+  line-height: 1.8;
+  margin-bottom: 18px;
+}
+
 .service-card ul {
   display: flex;
   flex-direction: column;
@@ -1093,6 +1099,20 @@ h6 {
   left: 0;
   color: var(--blue-light);
   font-size: 0.8rem;
+}
+
+.service-card .card-link {
+  margin-top: 24px;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.9rem;
+  font-weight: 700;
+  color: var(--blue-dark);
+}
+
+.service-card .card-link:hover {
+  color: var(--blue-light);
 }
 
 /* Dark section service cards */
@@ -1364,6 +1384,32 @@ h6 {
   color: var(--blue-dark);
   font-weight: 600;
   line-height: 1.5;
+}
+
+.portfolio-card .portfolio-card-summary {
+  margin-top: 12px;
+  color: var(--text-muted);
+  font-size: 0.92rem;
+  line-height: 1.7;
+}
+
+.portfolio-card .card-actions {
+  margin-top: 20px;
+}
+
+.portfolio-card .card-link {
+  position: relative;
+  z-index: 3;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  color: var(--blue-dark);
+  font-size: 0.88rem;
+  font-weight: 700;
+}
+
+.portfolio-card .card-link:hover {
+  color: var(--blue-light);
 }
 
 .portfolio-card .card-number {
@@ -1907,6 +1953,174 @@ h6 {
 }
 
 /* ============================================
+   DETAIL CONTENT / FAQ / CASE STUDIES
+   ============================================ */
+.detail-grid,
+.faq-grid,
+.case-study-grid,
+.meta-grid,
+.gallery-grid {
+  display: grid;
+  gap: 24px;
+}
+
+.detail-grid,
+.faq-grid,
+.case-study-grid,
+.gallery-grid {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.meta-grid {
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+}
+
+.detail-card,
+.faq-item,
+.case-study-card {
+  padding: 32px;
+  background: var(--white);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  box-shadow: 0 8px 32px rgba(14, 39, 71, 0.05);
+}
+
+.detail-card h3,
+.faq-item h3,
+.case-study-card h3 {
+  color: var(--blue-dark);
+  margin-bottom: 14px;
+  font-size: 1.15rem;
+}
+
+.detail-card p,
+.faq-item p,
+.case-study-card p,
+.case-study-body p {
+  color: var(--text-muted);
+  line-height: 1.8;
+}
+
+.detail-card ul,
+.case-study-body ul {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-top: 18px;
+}
+
+.detail-card ul li,
+.case-study-body ul li {
+  position: relative;
+  padding-left: 20px;
+  color: var(--text-body);
+}
+
+.detail-card ul li::before,
+.case-study-body ul li::before {
+  content: '▸';
+  position: absolute;
+  left: 0;
+  color: var(--blue-light);
+  font-size: 0.8rem;
+}
+
+.detail-card .detail-kicker,
+.case-study-card .case-study-kicker,
+.case-study-body .detail-kicker {
+  display: inline-block;
+  margin-bottom: 14px;
+  padding: 5px 12px;
+  background: var(--blue-pale);
+  color: var(--blue-light);
+  border-radius: 999px;
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.detail-card .detail-actions,
+.case-study-card .detail-actions,
+.case-study-body .detail-actions {
+  margin-top: 20px;
+}
+
+.detail-card .detail-link,
+.case-study-card .detail-link,
+.case-study-body .detail-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-weight: 700;
+  color: var(--blue-dark);
+}
+
+.detail-card .detail-link:hover,
+.case-study-card .detail-link:hover,
+.case-study-body .detail-link:hover {
+  color: var(--blue-light);
+}
+
+.meta-card {
+  padding: 24px;
+  background: var(--white);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  text-align: left;
+}
+
+.meta-card .meta-label {
+  display: block;
+  margin-bottom: 8px;
+  color: var(--text-light);
+  font-size: 0.75rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  font-weight: 700;
+}
+
+.meta-card .meta-value {
+  color: var(--blue-dark);
+  font-weight: 700;
+  line-height: 1.6;
+}
+
+.case-study-card .case-study-meta {
+  margin-top: 16px;
+  color: var(--text-light);
+  font-size: 0.82rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+
+.gallery-grid img {
+  width: 100%;
+  height: 280px;
+  object-fit: cover;
+  border-radius: var(--radius);
+  border: 1px solid var(--border);
+  cursor: pointer;
+}
+
+.case-study-body {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+
+.case-study-section {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.case-study-section h2 {
+  font-size: 1.4rem;
+  color: var(--blue-dark);
+}
+
+/* ============================================
    LEGALITIES
    ============================================ */
 .legal-grid {
@@ -1977,6 +2191,16 @@ h6 {
 .footer-contact-item .icon {
   color: var(--blue-light);
   flex-shrink: 0;
+}
+
+.footer-contact-item a,
+.legal-card a {
+  color: inherit;
+}
+
+.footer-contact-item a:hover,
+.legal-card a:hover {
+  color: var(--blue-light);
 }
 
 .footer-bottom {
@@ -2306,6 +2530,14 @@ h6 {
   }
 
   .portfolio-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .detail-grid,
+  .faq-grid,
+  .case-study-grid,
+  .meta-grid,
+  .gallery-grid {
     grid-template-columns: 1fr;
   }
 

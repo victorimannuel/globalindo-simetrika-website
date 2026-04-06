@@ -50,49 +50,9 @@ function initNavbar() {
     }
 }
 
-// ---- Navbar scroll effect + mobile toggle ----
-function injectStructuredData() {
-    const script = document.createElement('script');
-    script.type = 'application/ld+json';
-    script.text = JSON.stringify({
-        "@context": "https://schema.org",
-        "@graph": [
-            {
-                "@type": "WebSite",
-                "name": "PT. Globalindo Simetrika",
-                "url": "https://globalindosimetrika.co.id/"
-            },
-            {
-                "@type": "Organization",
-                "name": "PT. Globalindo Simetrika",
-                "url": "https://globalindosimetrika.co.id/",
-                "logo": "https://globalindosimetrika.co.id/images/logo.webp",
-                "contactPoint": {
-                    "@type": "ContactPoint",
-                    "telephone": "+62-812-3456-7890",
-                    "contactType": "customer service",
-                    "areaServed": "ID",
-                    "availableLanguage": ["Indonesian", "English"]
-                },
-                "address": {
-                    "@type": "PostalAddress",
-                    "streetAddress": "Jl. Cibodas Raya Ruko No.1, Antapani Tengah, Antapani, Bandung",
-                    "addressLocality": "Bandung",
-                    "addressRegion": "Jawa Barat",
-                    "postalCode": "40291",
-                    "addressCountry": "ID"
-                },
-                "sameAs": []
-            }
-        ]
-    });
-    document.head.appendChild(script);
-}
-
 document.addEventListener('DOMContentLoaded', () => {
     // Initialize navbar
     initNavbar();
-    injectStructuredData();
 
     // ---- Scroll animations ----
     const observerOptions = {
@@ -240,6 +200,7 @@ document.addEventListener('DOMContentLoaded', () => {
     document.addEventListener('click', (e) => {
         const card = e.target.closest('.portfolio-card');
         if (!card) return;
+        if (e.target.closest('a')) return;
 
         const title = card.querySelector('h4').textContent;
         const category = card.querySelector('.card-category').textContent;
@@ -338,11 +299,12 @@ document.addEventListener('DOMContentLoaded', () => {
     // ---- Single Source of Truth for Dynamic Data ----
     const syncConfig = () => {
         if (typeof CONFIG !== 'undefined') {
+            const whatsappNumber = String(CONFIG.whatsappNumber || '').replace(/\D/g, '');
             // Update all WhatsApp links
             document.querySelectorAll('a[href*="wa.me"]').forEach(link => {
                 const currentHref = link.getAttribute('href');
-                if (currentHref.includes('wa.me')) {
-                    link.setAttribute('href', `https://wa.me/${CONFIG.whatsappNumber}`);
+                if (currentHref.includes('wa.me') && whatsappNumber) {
+                    link.setAttribute('href', `https://wa.me/${whatsappNumber}`);
                 }
             });
 

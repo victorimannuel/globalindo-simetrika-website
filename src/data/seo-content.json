@@ -1,0 +1,577 @@
+{
+  "business": {
+    "email": "info@globalindosimetrika.co.id",
+    "address": {
+      "streetAddress": "Jl. Cibodas Raya Ruko No.1, Antapani Tengah, Antapani",
+      "addressLocality": "Bandung",
+      "addressRegion": "Jawa Barat",
+      "postalCode": "40291",
+      "addressCountry": "ID"
+    },
+    "areaServed": [
+      "Bandung",
+      "Jawa Barat",
+      "Banten",
+      "Jakarta",
+      "Indonesia"
+    ]
+  },
+  "services": [
+    {
+      "slug": "electrical-and-instrumentation",
+      "summary": {
+        "en": "Engineering, troubleshooting, retrofit, and maintenance services for industrial electrical, control, instrumentation, and automation systems.",
+        "id": "Layanan rekayasa, troubleshooting, retrofit, dan pemeliharaan untuk sistem kelistrikan, kontrol, instrumentasi, dan otomasi industri."
+      },
+      "intro": {
+        "en": "This service line supports industrial plants, utilities, and process facilities that need dependable control, protection, and field instrumentation performance. We handle field assessment, repair planning, replacement, installation, testing, and recommissioning with a focus on operational continuity and safety.",
+        "id": "Lini layanan ini mendukung pabrik industri, utilitas, dan fasilitas proses yang membutuhkan kinerja sistem kontrol, proteksi, dan instrumentasi lapangan yang andal. Kami menangani asesmen lapangan, perencanaan perbaikan, penggantian, instalasi, pengujian, dan recommissioning dengan fokus pada kontinuitas operasi dan keselamatan."
+      },
+      "problems": {
+        "en": [
+          "Unreliable control panels, PLC systems, cards, and field instrumentation",
+          "Obsolete or damaged power plant control equipment requiring retrofit or replacement",
+          "Recurring trips, interlocks, and monitoring failures that affect plant availability"
+        ],
+        "id": [
+          "Panel kontrol, sistem PLC, kartu, dan instrumentasi lapangan yang tidak andal",
+          "Peralatan kontrol pembangkit atau industri yang usang atau rusak dan memerlukan retrofit atau penggantian",
+          "Trip berulang, interlock, dan gangguan monitoring yang memengaruhi ketersediaan unit"
+        ]
+      },
+      "workflow": {
+        "en": [
+          "Site survey, diagnostics, and technical scope confirmation",
+          "Repair, retrofit, installation, and integration planning",
+          "Testing, commissioning, and handover documentation"
+        ],
+        "id": [
+          "Survei lokasi, diagnostik, dan konfirmasi ruang lingkup teknis",
+          "Perencanaan perbaikan, retrofit, instalasi, dan integrasi",
+          "Pengujian, commissioning, dan dokumentasi serah terima"
+        ]
+      },
+      "industries": {
+        "en": [
+          "Power generation and utilities",
+          "Oil and gas",
+          "Mining and heavy industry",
+          "Manufacturing and building systems"
+        ],
+        "id": [
+          "Pembangkit listrik dan utilitas",
+          "Minyak dan gas",
+          "Pertambangan dan industri berat",
+          "Manufaktur dan sistem bangunan"
+        ]
+      },
+      "faq": [
+        {
+          "question": {
+            "en": "Can you support retrofit work on legacy control systems?",
+            "id": "Apakah Anda dapat mendukung pekerjaan retrofit untuk sistem kontrol lama?"
+          },
+          "answer": {
+            "en": "Yes. We support assessment, repair, panel modification, card replacement, and control-system retrofit for aging industrial and utility assets where reliability and spare-part availability are major concerns.",
+            "id": "Ya. Kami mendukung asesmen, perbaikan, modifikasi panel, penggantian kartu, dan retrofit sistem kontrol untuk aset industri dan utilitas yang menua, terutama saat keandalan dan ketersediaan suku cadang menjadi isu utama."
+          }
+        },
+        {
+          "question": {
+            "en": "Do you only handle new installation projects?",
+            "id": "Apakah Anda hanya menangani proyek instalasi baru?"
+          },
+          "answer": {
+            "en": "No. We also support troubleshooting, repair, overhaul support, upgrade, and recommissioning work for systems that are already in operation.",
+            "id": "Tidak. Kami juga mendukung pekerjaan troubleshooting, perbaikan, dukungan overhaul, upgrade, dan recommissioning untuk sistem yang sudah beroperasi."
+          }
+        }
+      ],
+      "featuredProjects": [
+        "assessment-and-repair-of-various-automation-cards",
+        "upgrade-system-control-and-vsd-grabber-ship-unloader"
+      ]
+    },
+    {
+      "slug": "mechanical",
+      "summary": {
+        "en": "Mechanical installation, fabrication, lifting-equipment work, and maintenance support for critical industrial assets.",
+        "id": "Instalasi mekanikal, fabrikasi, pekerjaan peralatan angkat, dan dukungan pemeliharaan untuk aset industri kritis."
+      },
+      "intro": {
+        "en": "Our mechanical service scope covers fabrication, installation, maintenance, and upgrade work for heavy industrial equipment and supporting systems. The focus is safe execution, proper alignment, and practical delivery in live industrial environments.",
+        "id": "Ruang lingkup layanan mekanikal kami mencakup fabrikasi, instalasi, pemeliharaan, dan pekerjaan upgrade untuk peralatan industri berat serta sistem pendukungnya. Fokusnya adalah eksekusi yang aman, alignment yang tepat, dan penyelesaian pekerjaan yang praktis di lingkungan industri aktif."
+      },
+      "problems": {
+        "en": [
+          "Lifting systems and elevators requiring replacement or installation support",
+          "Mechanical assemblies that need fabrication, erection, or alignment correction",
+          "Industrial equipment requiring overhaul and maintenance planning"
+        ],
+        "id": [
+          "Sistem angkat dan elevator yang memerlukan penggantian atau dukungan instalasi",
+          "Rangkaian mekanikal yang membutuhkan fabrikasi, ereksi, atau koreksi alignment",
+          "Peralatan industri yang memerlukan overhaul dan perencanaan pemeliharaan"
+        ]
+      },
+      "workflow": {
+        "en": [
+          "Mechanical condition review and work method preparation",
+          "Fabrication, installation, replacement, or overhaul execution",
+          "Functional checks, safety verification, and closeout documentation"
+        ],
+        "id": [
+          "Tinjauan kondisi mekanikal dan persiapan metode kerja",
+          "Pelaksanaan fabrikasi, instalasi, penggantian, atau overhaul",
+          "Pemeriksaan fungsi, verifikasi keselamatan, dan dokumentasi penutupan pekerjaan"
+        ]
+      },
+      "industries": {
+        "en": [
+          "Power plants",
+          "Industrial utilities",
+          "Manufacturing facilities",
+          "Material-handling environments"
+        ],
+        "id": [
+          "Pembangkit listrik",
+          "Utilitas industri",
+          "Fasilitas manufaktur",
+          "Lingkungan material handling"
+        ]
+      },
+      "faq": [
+        {
+          "question": {
+            "en": "Do you support both installation and maintenance work?",
+            "id": "Apakah Anda mendukung pekerjaan instalasi dan pemeliharaan?"
+          },
+          "answer": {
+            "en": "Yes. We handle installation, replacement, fabrication support, and maintenance work depending on the condition of the equipment and the operating environment.",
+            "id": "Ya. Kami menangani instalasi, penggantian, dukungan fabrikasi, dan pekerjaan pemeliharaan sesuai kondisi peralatan dan lingkungan operasinya."
+          }
+        },
+        {
+          "question": {
+            "en": "Can you work in operating industrial facilities?",
+            "id": "Apakah Anda dapat bekerja di fasilitas industri yang masih beroperasi?"
+          },
+          "answer": {
+            "en": "Yes. Our teams prepare method statements and safety controls so work can be coordinated with plant operations, shutdown windows, and access restrictions.",
+            "id": "Ya. Tim kami menyiapkan metode kerja dan pengendalian keselamatan agar pekerjaan dapat dikoordinasikan dengan operasi pabrik, jadwal shutdown, dan pembatasan akses."
+          }
+        }
+      ],
+      "featuredProjects": [
+        "erection-and-installation-lift-central-control-room-ccr"
+      ]
+    },
+    {
+      "slug": "civil-work",
+      "summary": {
+        "en": "Civil construction, renovation, facade, landscape, and site-improvement work for industrial and supporting facilities.",
+        "id": "Pekerjaan konstruksi sipil, renovasi, fasad, lanskap, dan peningkatan area untuk fasilitas industri dan penunjangnya."
+      },
+      "intro": {
+        "en": "Our civil work capability supports industrial buildings, administrative facilities, access areas, and site-improvement needs. We combine practical field execution with structured project coordination so civil scopes can be delivered alongside active operations.",
+        "id": "Kapabilitas pekerjaan sipil kami mendukung bangunan industri, fasilitas administrasi, area akses, dan kebutuhan peningkatan area. Kami menggabungkan eksekusi lapangan yang praktis dengan koordinasi proyek yang terstruktur agar lingkup sipil dapat dikerjakan bersamaan dengan operasi yang tetap berjalan."
+      },
+      "problems": {
+        "en": [
+          "Buildings and facilities requiring revitalization or new construction support",
+          "Outdoor and access areas needing canopy, landscape, or utility improvements",
+          "Civil scopes that must be coordinated with operational, safety, and quality requirements"
+        ],
+        "id": [
+          "Bangunan dan fasilitas yang memerlukan revitalisasi atau dukungan konstruksi baru",
+          "Area luar dan akses yang memerlukan kanopi, lanskap, atau peningkatan utilitas",
+          "Lingkup sipil yang harus dikoordinasikan dengan persyaratan operasi, keselamatan, dan kualitas"
+        ]
+      },
+      "workflow": {
+        "en": [
+          "Site review, quantity and constructability assessment",
+          "Execution planning, mobilization, and staged field work",
+          "Quality checks, punch-list closeout, and handover"
+        ],
+        "id": [
+          "Tinjauan lokasi, asesmen kuantitas, dan constructability",
+          "Perencanaan pelaksanaan, mobilisasi, dan pekerjaan lapangan bertahap",
+          "Pemeriksaan kualitas, penyelesaian punch list, dan serah terima"
+        ]
+      },
+      "industries": {
+        "en": [
+          "Industrial plants",
+          "Administrative and support buildings",
+          "Plant surroundings and operational compounds"
+        ],
+        "id": [
+          "Pabrik industri",
+          "Gedung administrasi dan bangunan penunjang",
+          "Lingkungan pabrik dan area operasional"
+        ]
+      },
+      "faq": [
+        {
+          "question": {
+            "en": "Do you handle small improvement work as well as larger projects?",
+            "id": "Apakah Anda menangani pekerjaan improvement kecil maupun proyek yang lebih besar?"
+          },
+          "answer": {
+            "en": "Yes. We support improvement, revitalization, and construction scopes ranging from focused site work to multi-area building packages.",
+            "id": "Ya. Kami mendukung pekerjaan improvement, revitalisasi, dan konstruksi mulai dari pekerjaan area terbatas hingga paket bangunan multi-area."
+          }
+        },
+        {
+          "question": {
+            "en": "Can civil work be coordinated with industrial operating constraints?",
+            "id": "Apakah pekerjaan sipil dapat dikoordinasikan dengan keterbatasan operasi industri?"
+          },
+          "answer": {
+            "en": "Yes. We plan sequencing, access, and safety controls to match the facility’s operating conditions and permit requirements.",
+            "id": "Ya. Kami merencanakan urutan pekerjaan, akses, dan pengendalian keselamatan sesuai kondisi operasi fasilitas dan persyaratan perizinan."
+          }
+        }
+      ],
+      "featuredProjects": [
+        "official-residence-construction",
+        "canopy-installation-amp-landscaping-services"
+      ]
+    },
+    {
+      "slug": "procurement",
+      "summary": {
+        "en": "Industrial procurement support for automation components, control parts, valves, and other operational equipment needs.",
+        "id": "Dukungan pengadaan industri untuk komponen otomasi, suku cadang kontrol, valve, dan kebutuhan peralatan operasional lainnya."
+      },
+      "intro": {
+        "en": "We support clients that need reliable sourcing for operational, maintenance, and project-driven equipment requirements. Procurement support is focused on technical suitability, delivery coordination, and practical alignment with field execution needs.",
+        "id": "Kami mendukung klien yang membutuhkan pengadaan andal untuk kebutuhan operasional, pemeliharaan, dan proyek. Dukungan pengadaan difokuskan pada kesesuaian teknis, koordinasi pengiriman, dan keselarasan praktis dengan kebutuhan pelaksanaan di lapangan."
+      },
+      "problems": {
+        "en": [
+          "Difficulty sourcing automation parts and industrial equipment for ongoing operations",
+          "Need for technically aligned supply support during repair or retrofit projects",
+          "Procurement packages that must be synchronized with maintenance or shutdown work"
+        ],
+        "id": [
+          "Kesulitan mendapatkan komponen otomasi dan peralatan industri untuk operasi berjalan",
+          "Kebutuhan dukungan pengadaan yang selaras secara teknis selama proyek perbaikan atau retrofit",
+          "Paket pengadaan yang harus disinkronkan dengan pekerjaan pemeliharaan atau shutdown"
+        ]
+      },
+      "workflow": {
+        "en": [
+          "Requirement clarification and technical alignment",
+          "Sourcing, supply planning, and delivery coordination",
+          "Support for receiving, inspection, and field integration"
+        ],
+        "id": [
+          "Klarifikasi kebutuhan dan penyelarasan teknis",
+          "Sourcing, perencanaan suplai, dan koordinasi pengiriman",
+          "Dukungan penerimaan barang, inspeksi, dan integrasi ke lapangan"
+        ]
+      },
+      "industries": {
+        "en": [
+          "Power generation",
+          "Process plants",
+          "Industrial maintenance teams",
+          "Project and turnaround environments"
+        ],
+        "id": [
+          "Pembangkit listrik",
+          "Pabrik proses",
+          "Tim pemeliharaan industri",
+          "Lingkungan proyek dan turnaround"
+        ]
+      },
+      "faq": [
+        {
+          "question": {
+            "en": "Is procurement handled as a standalone service or with project execution?",
+            "id": "Apakah pengadaan ditangani sebagai layanan terpisah atau bersama pelaksanaan proyek?"
+          },
+          "answer": {
+            "en": "Both. We can support standalone supply needs or align procurement directly with repair, retrofit, installation, and maintenance scopes.",
+            "id": "Keduanya. Kami dapat mendukung kebutuhan suplai terpisah maupun menyelaraskan pengadaan langsung dengan pekerjaan perbaikan, retrofit, instalasi, dan pemeliharaan."
+          }
+        },
+        {
+          "question": {
+            "en": "What kind of equipment can you support?",
+            "id": "Jenis peralatan apa yang dapat Anda dukung?"
+          },
+          "answer": {
+            "en": "We support industrial equipment packages including automation and control parts, valves, and other project-specific operational components based on client requirements.",
+            "id": "Kami mendukung paket peralatan industri termasuk komponen otomasi dan kontrol, valve, serta komponen operasional spesifik proyek sesuai kebutuhan klien."
+          }
+        }
+      ],
+      "featuredProjects": [
+        "procurement-of-automation-and-industrial-equipment"
+      ]
+    }
+  ],
+  "featuredCaseStudies": [
+    {
+      "folder": "assessment-and-repair-of-various-automation-cards",
+      "client": {
+        "en": "Industrial and utility operators",
+        "id": "Operator industri dan utilitas"
+      },
+      "location": {
+        "en": "Indonesia",
+        "id": "Indonesia"
+      },
+      "sector": {
+        "en": "Industrial automation and control systems",
+        "id": "Otomasi industri dan sistem kontrol"
+      },
+      "summary": {
+        "en": "Assessment and repair work for multiple automation cards used in industrial control systems to restore equipment reliability and reduce replacement pressure.",
+        "id": "Pekerjaan asesmen dan perbaikan berbagai kartu otomasi yang digunakan pada sistem kontrol industri untuk memulihkan keandalan peralatan dan mengurangi kebutuhan penggantian total."
+      },
+      "challenge": {
+        "en": "The client needed practical recovery options for damaged automation cards that affected control-system reliability and spare-part availability.",
+        "id": "Klien membutuhkan opsi pemulihan yang praktis untuk kartu otomasi yang rusak dan berdampak pada keandalan sistem kontrol serta ketersediaan suku cadang."
+      },
+      "solution": {
+        "en": "We carried out technical assessment, repair planning, component-level handling, and functional restoration support so the cards could return to service where feasible.",
+        "id": "Kami melakukan asesmen teknis, perencanaan perbaikan, penanganan pada level komponen, dan dukungan pemulihan fungsi agar kartu dapat kembali digunakan jika memungkinkan."
+      },
+      "outcome": {
+        "en": "The work supported faster recovery of automation assets, extended usable equipment life, and helped clients manage risk on legacy control infrastructure.",
+        "id": "Pekerjaan ini mendukung pemulihan aset otomasi yang lebih cepat, memperpanjang usia pakai peralatan, dan membantu klien mengelola risiko pada infrastruktur kontrol lama."
+      },
+      "scope": {
+        "en": [
+          "Technical assessment of control cards",
+          "Repair and restoration support",
+          "Functional verification before return to service"
+        ],
+        "id": [
+          "Asesmen teknis kartu kontrol",
+          "Dukungan perbaikan dan pemulihan",
+          "Verifikasi fungsi sebelum digunakan kembali"
+        ]
+      }
+    },
+    {
+      "folder": "upgrade-system-control-and-vsd-grabber-ship-unloader",
+      "client": {
+        "en": "Bulk material handling operation",
+        "id": "Operasi penanganan material curah"
+      },
+      "location": {
+        "en": "Indonesia",
+        "id": "Indonesia"
+      },
+      "sector": {
+        "en": "Electrical drive and control upgrade",
+        "id": "Upgrade sistem drive dan kontrol elektrik"
+      },
+      "summary": {
+        "en": "Upgrade project for the control system and VSD package of a grabber ship unloader to improve operational control and equipment dependability.",
+        "id": "Proyek upgrade sistem kontrol dan paket VSD pada grabber ship unloader untuk meningkatkan kendali operasi dan keandalan peralatan."
+      },
+      "challenge": {
+        "en": "The ship unloader required improved control performance and more dependable drive-system behavior in a demanding industrial environment.",
+        "id": "Ship unloader memerlukan peningkatan performa kontrol dan perilaku sistem penggerak yang lebih andal di lingkungan industri yang menuntut."
+      },
+      "solution": {
+        "en": "We supported control-system upgrade work, VSD-related improvement, integration activities, and field execution to align the package with operational needs.",
+        "id": "Kami mendukung pekerjaan upgrade sistem kontrol, peningkatan terkait VSD, aktivitas integrasi, dan pelaksanaan lapangan agar paket tersebut selaras dengan kebutuhan operasi."
+      },
+      "outcome": {
+        "en": "The project improved control responsiveness and supported more stable equipment operation for material-handling activities.",
+        "id": "Proyek ini meningkatkan respons sistem kontrol dan mendukung operasi peralatan yang lebih stabil untuk aktivitas penanganan material."
+      },
+      "scope": {
+        "en": [
+          "Control-system upgrade support",
+          "VSD improvement and integration work",
+          "Testing and recommissioning coordination"
+        ],
+        "id": [
+          "Dukungan upgrade sistem kontrol",
+          "Pekerjaan peningkatan dan integrasi VSD",
+          "Koordinasi pengujian dan recommissioning"
+        ]
+      }
+    },
+    {
+      "folder": "procurement-of-automation-and-industrial-equipment",
+      "client": {
+        "en": "Industrial maintenance and project teams",
+        "id": "Tim pemeliharaan dan proyek industri"
+      },
+      "location": {
+        "en": "Indonesia",
+        "id": "Indonesia"
+      },
+      "sector": {
+        "en": "Procurement and industrial supply",
+        "id": "Pengadaan dan suplai industri"
+      },
+      "summary": {
+        "en": "Procurement package for automation and industrial equipment delivered to support maintenance, repair, and project execution requirements.",
+        "id": "Paket pengadaan peralatan otomasi dan industri untuk mendukung kebutuhan pemeliharaan, perbaikan, dan pelaksanaan proyek."
+      },
+      "challenge": {
+        "en": "The client required technically aligned equipment supply that could support active maintenance and project schedules without unnecessary procurement delays.",
+        "id": "Klien memerlukan suplai peralatan yang selaras secara teknis dan mampu mendukung jadwal pemeliharaan serta proyek aktif tanpa keterlambatan pengadaan yang tidak perlu."
+      },
+      "solution": {
+        "en": "We coordinated sourcing and supply for automation and industrial equipment packages based on field requirements and practical delivery needs.",
+        "id": "Kami mengoordinasikan sourcing dan suplai paket peralatan otomasi serta industri berdasarkan kebutuhan lapangan dan kebutuhan pengiriman yang praktis."
+      },
+      "outcome": {
+        "en": "The procurement work helped clients secure the right equipment faster and align supply timing with execution requirements on site.",
+        "id": "Pekerjaan pengadaan ini membantu klien memperoleh peralatan yang tepat lebih cepat dan menyelaraskan waktu suplai dengan kebutuhan pelaksanaan di lapangan."
+      },
+      "scope": {
+        "en": [
+          "Technical sourcing support",
+          "Industrial equipment supply coordination",
+          "Delivery alignment with project execution"
+        ],
+        "id": [
+          "Dukungan sourcing teknis",
+          "Koordinasi suplai peralatan industri",
+          "Penyelarasan pengiriman dengan pelaksanaan proyek"
+        ]
+      }
+    },
+    {
+      "folder": "erection-and-installation-lift-central-control-room-ccr",
+      "client": {
+        "en": "Industrial facility operator",
+        "id": "Operator fasilitas industri"
+      },
+      "location": {
+        "en": "Indonesia",
+        "id": "Indonesia"
+      },
+      "sector": {
+        "en": "Mechanical installation",
+        "id": "Instalasi mekanikal"
+      },
+      "summary": {
+        "en": "Mechanical erection and installation work for a lift serving a central control room environment requiring disciplined field execution and equipment coordination.",
+        "id": "Pekerjaan ereksi dan instalasi mekanikal untuk lift pada area central control room yang memerlukan eksekusi lapangan yang disiplin dan koordinasi peralatan."
+      },
+      "challenge": {
+        "en": "The project required controlled installation activity for a critical access system within an operational industrial environment.",
+        "id": "Proyek ini membutuhkan aktivitas instalasi yang terkendali untuk sistem akses kritis di lingkungan industri yang operasional."
+      },
+      "solution": {
+        "en": "We handled erection and installation support, field coordination, and execution planning to fit the lift package into the designated control-room environment.",
+        "id": "Kami menangani dukungan ereksi dan instalasi, koordinasi lapangan, serta perencanaan pelaksanaan untuk menempatkan paket lift pada lingkungan control room yang ditentukan."
+      },
+      "outcome": {
+        "en": "The work supported safe installation progress and dependable mechanical integration for the facility’s control-room access needs.",
+        "id": "Pekerjaan ini mendukung progres instalasi yang aman dan integrasi mekanikal yang andal untuk kebutuhan akses control room fasilitas."
+      },
+      "scope": {
+        "en": [
+          "Mechanical erection and installation",
+          "Field coordination for access-critical equipment",
+          "Execution planning and functional preparation"
+        ],
+        "id": [
+          "Ereksi dan instalasi mekanikal",
+          "Koordinasi lapangan untuk peralatan akses kritis",
+          "Perencanaan pelaksanaan dan persiapan fungsi"
+        ]
+      }
+    },
+    {
+      "folder": "official-residence-construction",
+      "client": {
+        "en": "Industrial support facility stakeholder",
+        "id": "Pemangku kepentingan fasilitas penunjang industri"
+      },
+      "location": {
+        "en": "Indonesia",
+        "id": "Indonesia"
+      },
+      "sector": {
+        "en": "Civil construction",
+        "id": "Konstruksi sipil"
+      },
+      "summary": {
+        "en": "Civil construction project for an official residence package, covering structured site execution and building-delivery coordination.",
+        "id": "Proyek konstruksi sipil untuk paket rumah dinas, mencakup pelaksanaan lapangan yang terstruktur dan koordinasi penyelesaian bangunan."
+      },
+      "challenge": {
+        "en": "The client required reliable civil execution for a complete residence package with attention to quality, sequencing, and site coordination.",
+        "id": "Klien membutuhkan pelaksanaan sipil yang andal untuk paket rumah dinas secara menyeluruh dengan perhatian pada kualitas, urutan kerja, dan koordinasi lapangan."
+      },
+      "solution": {
+        "en": "We delivered coordinated construction work, field supervision, and package execution aligned with the project’s site conditions and quality expectations.",
+        "id": "Kami melaksanakan pekerjaan konstruksi terkoordinasi, pengawasan lapangan, dan pelaksanaan paket proyek yang selaras dengan kondisi lokasi serta ekspektasi mutu."
+      },
+      "outcome": {
+        "en": "The project supported orderly construction progress and successful delivery of a complete supporting facility package.",
+        "id": "Proyek ini mendukung progres konstruksi yang tertata dan penyelesaian paket fasilitas pendukung secara baik."
+      },
+      "scope": {
+        "en": [
+          "Civil construction package delivery",
+          "Site coordination and supervision",
+          "Quality-oriented finishing and handover support"
+        ],
+        "id": [
+          "Pelaksanaan paket konstruksi sipil",
+          "Koordinasi dan pengawasan lapangan",
+          "Dukungan finishing berorientasi mutu dan serah terima"
+        ]
+      }
+    },
+    {
+      "folder": "canopy-installation-amp-landscaping-services",
+      "client": {
+        "en": "Industrial and facility-support stakeholder",
+        "id": "Pemangku kepentingan industri dan fasilitas pendukung"
+      },
+      "location": {
+        "en": "Indonesia",
+        "id": "Indonesia"
+      },
+      "sector": {
+        "en": "Civil improvement and site works",
+        "id": "Improvement sipil dan pekerjaan area"
+      },
+      "summary": {
+        "en": "Canopy installation and landscaping work carried out to improve functional outdoor areas and the visual condition of the site environment.",
+        "id": "Pekerjaan instalasi kanopi dan lanskap untuk meningkatkan fungsi area luar serta kondisi visual lingkungan lokasi."
+      },
+      "challenge": {
+        "en": "The site required coordinated improvement work that addressed both practical use of the space and the appearance of the surrounding environment.",
+        "id": "Lokasi membutuhkan pekerjaan improvement yang terkoordinasi untuk menjawab kebutuhan fungsi area sekaligus tampilan lingkungan sekitarnya."
+      },
+      "solution": {
+        "en": "We executed canopy installation and landscaping scopes with practical site planning and field coordination suited to the operating environment.",
+        "id": "Kami melaksanakan lingkup instalasi kanopi dan lanskap dengan perencanaan lokasi yang praktis serta koordinasi lapangan yang sesuai dengan lingkungan kerja."
+      },
+      "outcome": {
+        "en": "The completed work improved site usability, protected key access areas, and enhanced the overall presentation of the facility environment.",
+        "id": "Pekerjaan yang selesai meningkatkan kegunaan area, melindungi titik akses penting, dan memperbaiki tampilan keseluruhan lingkungan fasilitas."
+      },
+      "scope": {
+        "en": [
+          "Canopy installation",
+          "Landscape and external-area improvement",
+          "Coordinated civil finishing work"
+        ],
+        "id": [
+          "Instalasi kanopi",
+          "Peningkatan lanskap dan area luar",
+          "Pekerjaan finishing sipil yang terkoordinasi"
+        ]
+      }
+    }
+  ]
+}
