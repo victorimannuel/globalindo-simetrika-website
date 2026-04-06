@@ -606,6 +606,9 @@ const buildStructuredData = ({ slug, lang, title, description, pageName }) => {
     const caseStudy = segments[0] === 'portfolio' ? caseStudiesByFolder.get(segments[1]) : null;
     const serviceDetail = segments[0] === 'services' && segments[1] ? serviceDetailsBySlug.get(segments[1]) : null;
     const service = segments[0] === 'services' && segments[1] ? servicesBySlug.get(segments[1]) : null;
+    const faqEntries = slug === 'services'
+        ? seoContent.services.flatMap((item) => item.faq || [])
+        : (serviceDetail?.faq || []);
 
     const businessNode = {
         '@type': 'LocalBusiness',
@@ -684,6 +687,21 @@ const buildStructuredData = ({ slug, lang, title, description, pageName }) => {
                 getLocalized(caseStudy.sector, lang),
                 relatedService ? getLocalized(servicesBySlug.get(relatedService)?.name, lang) : undefined
             ].filter(Boolean)
+        });
+    }
+
+    if (faqEntries.length) {
+        graph.push({
+            '@type': 'FAQPage',
+            '@id': `${pageUrl}#faq`,
+            mainEntity: faqEntries.map((faq) => ({
+                '@type': 'Question',
+                name: getLocalized(faq.question, lang),
+                acceptedAnswer: {
+                    '@type': 'Answer',
+                    text: getLocalized(faq.answer, lang)
+                }
+            }))
         });
     }
 
