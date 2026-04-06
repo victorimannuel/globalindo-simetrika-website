@@ -89,39 +89,6 @@ function injectStructuredData() {
     document.head.appendChild(script);
 }
 
-function initNavbar() {
-    const navbar = document.querySelector('.navbar');
-    if (navbar) {
-        const handleScroll = () => {
-            navbar.classList.toggle('scrolled', window.scrollY > 50);
-        };
-        // Remove any previous listener to avoid duplicates
-        window.removeEventListener('scroll', window._gsHandleScroll);
-        window._gsHandleScroll = handleScroll;
-        window.addEventListener('scroll', handleScroll);
-        handleScroll();
-    }
-
-    const toggle = document.querySelector('.nav-toggle');
-    const menu = document.querySelector('.nav-menu');
-    if (toggle && menu) {
-        // Clone to strip old listeners before re-attaching
-        const newToggle = toggle.cloneNode(true);
-        toggle.parentNode.replaceChild(newToggle, toggle);
-
-        newToggle.addEventListener('click', () => {
-            newToggle.classList.toggle('active');
-            menu.classList.toggle('open');
-        });
-        menu.querySelectorAll('.nav-link').forEach(link => {
-            link.addEventListener('click', () => {
-                newToggle.classList.remove('active');
-                menu.classList.remove('open');
-            });
-        });
-    }
-}
-
 document.addEventListener('DOMContentLoaded', () => {
     // Initialize navbar
     initNavbar();
