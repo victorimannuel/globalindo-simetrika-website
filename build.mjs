@@ -843,7 +843,10 @@ const renderPage = (relPath, originalHtml) => {
 // ============================================================
 const generateSitemap = (relPaths) => {
     const today = new Date().toISOString().split('T')[0];
-    const urls = [`  <url>\n    <loc>${BASE_URL}/en/</loc>\n    <lastmod>${today}</lastmod>\n    <priority>1.0</priority>\n  </url>`];
+    const urls = LANGS.map((lang) => {
+        const priority = lang === DEFAULT_LANG ? '1.0' : '0.9';
+        return `  <url>\n    <loc>${buildUrls('', lang)}</loc>\n    <lastmod>${today}</lastmod>\n    <priority>${priority}</priority>\n  </url>`;
+    });
 
     relPaths.forEach((relPath) => {
         if (relPath.startsWith('parts/')) return;
