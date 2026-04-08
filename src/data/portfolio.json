@@ -81,14 +81,14 @@
       "id": "12",
       "category": "electrical",
       "folder": "upgrade-of-excitation-breaker-system",
-      "images": ["1.webp","2.webp","3.webp"],
+      "images": ["1.jpeg","2.jpeg","3.jpeg"],
       "title": { "en": "Upgrade Excitation Breaker Major Inspection GT 3.2", "id": "Upgrade Excitation Breaker Major Inspection GT 3.2" }
     },
     {
       "id": "13",
       "category": "electrical",
       "folder": "upgrade-system-control-and-vsd-grabber-ship-unloader",
-      "images": ["1.webp","2.webp","3.webp"],
+      "images": ["1.jpeg","2.jpeg","3.jpeg"],
       "title": { "en": "Upgrade System Control and VSD Grabber Ship Unloader", "id": "Upgrade Sistem Kontrol dan VSD Grabber Ship Unloader" }
     },
     {
@@ -123,14 +123,14 @@
       "id": "18",
       "category": "electrical",
       "folder": "assessment-and-repair-of-infrared-curtains",
-      "images": ["1.webp","2.webp","3.webp"],
+      "images": ["1.jpeg","2.jpeg","3.jpeg"],
       "title": { "en": "Assessment and Repair Infrared Curtains", "id": "Asesmen dan Perbaikan Infrared Curtains" }
     },
     {
       "id": "19",
       "category": "electrical",
       "folder": "revitalization-of-medium-voltage-panel",
-      "images": ["1.webp","2.webp","3.webp"],
+      "images": ["1.png","2.png","3.png"],
       "title": { "en": "STRE 6.3 kV Cable Replacement", "id": "Penggantian Kabel STRE 6.3 kV" }
     },
     {
@@ -151,14 +151,14 @@
       "id": "22a",
       "category": "mechanical",
       "folder": "erection-and-installation-lift-central-control-room-ccr",
-      "images": ["1.jpeg","2.jpeg","3.jpeg"],
+      "images": ["1.jpeg","2.jpeg","3.jpeg", "4.jpeg","5.jpeg"],
       "title": { "en": "Erection and Installation Lift Central Control Room (CCR)", "id": "Ereksi dan Instalasi Lift Central Control Room (CCR)" }
     },
     {
       "id": "22b",
       "category": "mechanical",
       "folder": "unit-replacement-of-the-2000-kg-boiler-elevator",
-      "images": ["1.jpeg","2.jpeg","3.jpeg"],
+      "images": ["1.jpeg","2.jpeg","3.jpeg", "4.jpeg","5.jpeg"],
       "title": { "en": "Unit Replacement of The 2000 KG Boiler Elevator", "id": "Penggantian Unit Elevator Boiler 2000 KG" }
     },
     {
